@@ -147,7 +147,16 @@ For accessibility, all the public models we used can be downloaded from the foll
 Furthermore, the detected results for each model can be found in the "DT" directory as previously mentioned.
 
 ### 3. Scripts
+This section provides step-by-step instructions on how to set up the required packages and libraries for running the code and reproducing our results.
 
+### Python
+For our experiments, we used Python 3.7. Furthermore, we require the following Python packages:
+
+```
+pip install sklearn
+pip install numpy
+pip install cv2
+```
 
 
 ### 4. Example
