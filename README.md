@@ -2,20 +2,6 @@
 
 Welcome to the online appendix for the paper entitled "Fairness Testing of Autonomous Driving Systems". Here, we provide supplementary materials including raw results, Python code for the analysis process, and scripts to replicate our experiments.
 
-## Installation
-
-This section provides step-by-step instructions on how to set up the required packages and libraries for running the code and reproducing our results.
-
-### Python
-
-For our experiments, we used Python 3.7. Furthermore, we require the following Python packages:
-
-```
-pip install sklearn
-pip install numpy
-pip install cv2
-```
-
 ## Repository Structure and Instructions
 
 In this section, we offer a detailed explanation of each folder's purpose and function. 
