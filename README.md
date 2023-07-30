@@ -13,9 +13,7 @@ For our experiments, we used Python 3.7. Furthermore, we require the following P
 ```
 pip install sklearn
 pip install numpy
-pip install shapely
-pip install matplotlib
-pip install "tensorflow >= 1.13.1, < 2"
+pip install cv2
 ```
 
 ## Repository Structure and Instructions
