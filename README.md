@@ -42,10 +42,10 @@ Datasets
 |-- The partitioned dataset in each scenario
     |-- brightness
     |   |-- day and night
-    |   |-- five brightness level
+    |   |-- five brightness levels
     |
     |-- contrast
-    |   |-- five contrast level
+    |   |-- five contrast levels
     |
     |-- weather
         |-- rainy-weather
