@@ -2,15 +2,11 @@
 
 Welcome to the online appendix for the paper entitled "Fairness Testing of Autonomous Driving Systems". Here, we provide supplementary materials including raw results, Python code for the analysis process, and scripts to replicate our experiments.
 
-## Repository Structure and Instructions
-
-In this section, we offer a detailed explanation of each folder's purpose and function. 
-
-### 1. Datasets and Labels
+## Datasets and Labels
 
 In this directory, we present the datasets and labels used in our experiments.
 
-**(1) Datasets**
+### 1. Datasets
 
 The "Datasets" directory is structured as follows:
 
@@ -38,7 +34,7 @@ Datasets
 
 
 
-**① Four Benchmark Testing Datasets**
+**(1) Four Benchmark Testing Datasets**
 
 Our experiments utilize these four benchmark testing datasets, as described in Table 2 (Benchmark datasets for fairness testing) in our academic paper. The table provides details on each dataset's size and time of capture.
 
@@ -51,13 +47,13 @@ Our experiments utilize these four benchmark testing datasets, as described in T
 
 All the testing datasets can be downloaded from the provided link:  
 
-**② The partitioned dataset in each scenario**
+**(2) The partitioned dataset in each scenario**
 
 In addition, we also offer the partitioned datasets used in RQ2. The scripts used for partitioning these datasets can be found in the "Scripts" directory. RQ2 focuses on real-world key scenarios, each with its respective sub-folder: brightness, contrast and weather.
 
 These partitioned datasets can be downloaded here:
 
-**(2) Labels**
+### 2. Labels
 
 The "GT" subdirectory contains ground-truth labels for each of the four testing datasets. Within this directory, each dataset's labels are categorized based on their attributes and stored in corresponding sub-folders. Similarly, the "DT" subdirectory is also organized according to the four testing datasets, and it contains predicted labels from eight pedestrian detectors for each dataset. To summarize, the structure of the "Labels" folder is as follows:
 
@@ -94,7 +90,7 @@ Labels
 
 
 
-**① GT  (Ground-Truth Labels)**
+**(1) GT  (Ground-Truth Labels)**
 
 The "GT" directory contains ground-truth labels for each dataset, as detailed in Table 4 (Count of labeled instances on each dataset) in our academic paper. For the "bdd100k" dataset, we provide skin-tone labels formulated based on the research conducted by Wilson et al. [Link to Wilson et al.], along with manually labeled  information for age and gender on all four testing datasets. 
 
@@ -120,7 +116,7 @@ The final label for the middle person is:
 
 `0 (male) 787 257 (top-left corner) 1068 768 (bottom-right corner)`
 
-**② DT (Detected Labels/Predicted Labels)**
+**(2) DT (Detected Labels/Predicted Labels)**
 
 The detected labels refer to the prediction information made by the 8 pedestrian detectors on the locations of "predicted person" in the four testing datasets. For each image's inference result, there is a corresponding TXT file. Within each TXT file, the organization format for the prediction result of a person is represented in a five-digit format, as follows:
 
@@ -130,7 +126,7 @@ Confidence_score represents the probability assigned by the pedestrian detector 
 
 `X_min`, `Y_min`, `X_max`, and `Y_max` carry the same meaning as in the GT. They denote the coordinates of the bounding box enclosing the predicted person, where `X_min` and `Y_min` correspond to the top-left corner, and `X_max` and `Y_max` correspond to the bottom-right corner of the bounding box.
 
-### 2. Pedestrian Detection Models
+## Pedestrian Detection Models
 
 In this section, we describe the experimental settings on eight pedestrian detection in detail. The experiments are implemented with their corresponding open-source framework.
 
@@ -146,10 +142,10 @@ For accessibility, all the public models we used can be downloaded from the foll
 
 Furthermore, the detected results for each model can be found in the "DT" directory as previously mentioned.
 
-### 3. Scripts
+## Scripts
 This section provides step-by-step instructions on how to set up the required packages and libraries for running the code and reproducing our results.
 
-#### Python
+### 1. Python Configuration
 For our experiments, we used Python 3.7. Furthermore, we require the following Python packages:
 
 ```
@@ -159,9 +155,9 @@ pip install cv2
 ```
 
 
-### 4. Example
+## Example
 
 
 
-### 5. Results
+## Results
 
