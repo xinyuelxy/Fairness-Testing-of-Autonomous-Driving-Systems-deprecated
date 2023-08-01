@@ -149,7 +149,7 @@ Furthermore, the detected results for each model can be found in the "DT" direct
 ### 3. Scripts
 This section provides step-by-step instructions on how to set up the required packages and libraries for running the code and reproducing our results.
 
-### Python
+#### Python
 For our experiments, we used Python 3.7. Furthermore, we require the following Python packages:
 
 ```
