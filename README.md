@@ -175,31 +175,576 @@ For accessibility, all the public models we used can be downloaded from the foll
 
 The predicted results from each model can be found in the "DT" directory as previously mentioned.
 
-## Scripts
-In this section, we provide the computational code for <u>Section 4</u> of the paper.  The "evaluation" folder contains the essential code for generating Table 6, Figure 1, Figure 2, Figure 3, Table 7, Figure 4, Figure 5, and Table 8. Additionally, it includes a demonstration example for computing evaluation metrics and performing statistical analysis. The "scenario_split" folder offers the code used in Section 3.3.3 of the paper, specifically for partitioning datasets based on five brightness and contrast levels.  Moreover, the "label_process" folder contains code that may be helpful to future researchers when processing and handling labels in their experiments.
 
-For obtaining our results, you will only need to use the organized "Labels" folder and some of the scripts provided in these directories. The "evaluation" folder will be instrumental in generating the evaluation results and figures, while the "scenario_split" folder will help in investigating fairness in different scenarios. Finally, the "label_process" folder will assist in the label processing required during the experiments.
+## Scripts
+In this section, we provide the computational code for <u>Section 4</u> of the paper.  The "evaluation" folder contains the essential code for generating Table 6, Figure 1, Figure 2, Figure 3, Table 7, Figure 4, Figure 5, and Table 8. Additionally, it includes a demonstration example for computing evaluation metrics and performing statistical analysis. The "scenario_split" folder offers the code used in Section 3.3.3 of the paper, specifically for partitioning datasets based on five brightness and contrast levels.  
+
+For obtaining our results, you will only need to use the organized "Labels" folder and some of the scripts provided in these directories. The "evaluation" folder will be instrumental in generating the evaluation results and figures, while the "scenario_split" folder will help in investigating fairness in different scenarios. 
+
+### 1. Installation
+
+Here are the required packages.
+
+```
+pip install opencv-python
+pip install numpy
+pip install pandas
+pip install statsmodels
+pip install notebook
+```
 
 ### 2. Evaluation
 
+The script `evaluation.py` offers three selectable parameters for customization:
 
+- `--attribute`: This parameter allows you to choose the sensitive attribute that you want to investigate. You can specify the attribute such as "gender," "age," or "skin" to focus on a particular aspect of the evaluation.
+- `--gt-path`: This parameter is used to specify the input path for the ground-truth labels (GT). You need to provide the path to the GT directory that contains the labels for the chosen attribute in the "Labels" directory.
+- `--dt-path`: This parameter is used to specify the paths for the eight pedestrian detectors' predicted labels (DT). You need to provide the paths to the corresponding DT directories containing eight pedestrian detector's predictions for the chosen attribute "Labels" .
 
+By customizing these parameters, you can perform evaluations and analysis for different sensitive attributes, experiment with various ground-truth and predicted labels, and explore fairness in pedestrian detection across different scenarios.
 
+**(1) Demo for RQ1**
 
+Suppose you want to obtain the results of the eight pedestrian detectors on the "age" attribute for the "citypersons" dataset, as shown in Figure 2. You can run the following command in the terminal:
 
+```
+python .\evaluation\evaluation.py --attribute age --gt_path '..\Labels\RQ1_Overall\GT\citypersons\age' --dt_path '..\Labels\RQ1_Overall\DT\citypersons'
+```
+
+Then, you can get the output as shown below:
+
+```
+========== Evaluation Results ==========
+
+Current Testing Attribute: Age
+
+========== DT Type: yolox ==========
+
+Total Samples:  4801
+
+Adults Results:
+        Total: 4568
+        Successful Detections: 3100
+        MR: 0.3214
+
+Children Results:
+        Total: 233
+        Successful Detections: 96
+        MR: 0.5880
+
+Equal Opportunity Difference (EOD):
+        -0.2666
+
+Two Proportions Z-test (P-value):
+        3.929363532426053e-17
+
+========== DT Type: retinanet ==========
+
+Total Samples:  4801
+
+Adults Results:
+        Total: 4568
+        Successful Detections: 3612
+        MR: 0.2093
+
+Children Results:
+        Total: 233
+        Successful Detections: 108
+        MR: 0.5365
+
+Equal Opportunity Difference (EOD):
+        -0.3272
+
+Two Proportions Z-test (P-value):
+        1.9549958518299283e-31
+
+========== DT Type: faster_rcnn ==========
+
+Total Samples:  4801
+
+Adults Results:
+        Total: 4568
+        Successful Detections: 4212
+        MR: 0.0779
+
+Children Results:
+        Total: 233
+        Successful Detections: 161
+        MR: 0.3090
+
+Equal Opportunity Difference (EOD):
+        -0.2311
+
+Two Proportions Z-test (P-value):
+        1.4465365133132638e-33
+
+========== DT Type: cascade_rcnn ==========
+
+Total Samples:  4801
+
+Adults Results:
+        Total: 4568
+        Successful Detections: 4173
+        MR: 0.0865
+
+Children Results:
+        Total: 233
+        Successful Detections: 155
+        MR: 0.3348
+
+Equal Opportunity Difference (EOD):
+        -0.2483
+
+Two Proportions Z-test (P-value):
+        2.4550390056615855e-35
+
+========== DT Type: alfnet ==========
+
+Total Samples:  4801
+
+Adults Results:
+        Total: 4568
+        Successful Detections: 3939
+        MR: 0.1377
+
+Children Results:
+        Total: 233
+        Successful Detections: 136
+        MR: 0.4163
+
+Equal Opportunity Difference (EOD):
+        -0.2786
+
+Two Proportions Z-test (P-value):
+        5.259954276460873e-31
+
+========== DT Type: csp ==========
+
+Total Samples:  4801
+
+Adults Results:
+        Total: 4568
+        Successful Detections: 4086
+        MR: 0.1055
+
+Children Results:
+        Total: 233
+        Successful Detections: 149
+        MR: 0.3605
+
+Equal Opportunity Difference (EOD):
+        -0.2550
+
+Two Proportions Z-test (P-value):
+        5.339469251217817e-32
+
+========== DT Type: mgan ==========
+
+Total Samples:  4801
+
+Adults Results:
+        Total: 4568
+        Successful Detections: 4156
+        MR: 0.0902
+
+Children Results:
+        Total: 233
+        Successful Detections: 160
+        MR: 0.3133
+
+Equal Opportunity Difference (EOD):
+        -0.2231
+
+Two Proportions Z-test (P-value):
+        2.9448118109214345e-28
+
+========== DT Type: prnet ==========
+
+Total Samples:  4801
+
+Adults Results:
+        Total: 4568
+        Successful Detections: 3873
+        MR: 0.1521
+
+Children Results:
+        Total: 233
+        Successful Detections: 136
+        MR: 0.4163
+
+Equal Opportunity Difference (EOD):
+        -0.2642
+
+Two Proportions Z-test (P-value):
+        3.0638135681065984e-26
+```
+
+Similarly, to generate the results for Table 6, Figure 1, and Figure 2 in RQ1, you can repeat the execution and change the paths accordingly, then record the output results. All the recorded data will be saved in the "RQ1-overall fairness.xlsx" in "RQ1" subdirectory within the "Results" folder.
+
+**(2) Demo for RQ2**
+
+Suppose you want to calculate the statistics for the `age` attribute in both the "day-time" and "night-time" scenarios, as presented in Table 7, you can execute the following commands in the terminal:
+
+Step 1: Obtain data for the "day time" scenario:
+
+```
+python .\evaluation\evaluation.py --attribute skin --gt_path '..\Labels\RQ2_Partitioned\brightness\day_night\GT\day\skin' --dt_path '..\Labels\RQ2_Partitioned\brightness\day_night\DT\day'
+```
+
+Output:
+
+```
+========== Evaluation Results ==========
+
+Current Testing Attribute: Skin
+
+========== DT Type: yolox ==========
+
+Total Samples:  2990
+
+Light-Skin Results:
+        Total: 2319
+        Successful Detections: 2149
+        MR: 0.0733
+
+Dark-Skin Results:
+        Total: 671
+        Successful Detections: 433
+        MR: 0.3547
+
+Equal Opportunity Difference (EOD):
+        -0.2814
+
+Two Proportions Z-test (P-value):
+        4.944517072987645e-78
+
+========== DT Type: retinanet ==========
+
+Total Samples:  2990
+
+Light-Skin Results:
+        Total: 2319
+        Successful Detections: 2093
+        MR: 0.0975
+
+Dark-Skin Results:
+        Total: 671
+        Successful Detections: 435
+        MR: 0.3517
+
+Equal Opportunity Difference (EOD):
+        -0.2543
+
+Two Proportions Z-test (P-value):
+        5.933476284573287e-58
+
+========== DT Type: faster_rcnn ==========
+
+Total Samples:  2990
+
+Light-Skin Results:
+        Total: 2319
+        Successful Detections: 2187
+        MR: 0.0569
+
+Dark-Skin Results:
+        Total: 671
+        Successful Detections: 647
+        MR: 0.0358
+
+Equal Opportunity Difference (EOD):
+        0.0212
+
+Two Proportions Z-test (P-value):
+        0.030003417646018847
+
+========== DT Type: cascade_rcnn ==========
+
+Total Samples:  2990
+
+Light-Skin Results:
+        Total: 2319
+        Successful Detections: 2182
+        MR: 0.0591
+
+Dark-Skin Results:
+        Total: 671
+        Successful Detections: 645
+        MR: 0.0387
+
+Equal Opportunity Difference (EOD):
+        0.0203
+
+Two Proportions Z-test (P-value):
+        0.04108072584895096
+
+========== DT Type: alfnet ==========
+
+Total Samples:  2990
+
+Light-Skin Results:
+        Total: 2319
+        Successful Detections: 1452
+        MR: 0.3739
+
+Dark-Skin Results:
+        Total: 671
+        Successful Detections: 411
+        MR: 0.3875
+
+Equal Opportunity Difference (EOD):
+        -0.0136
+
+Two Proportions Z-test (P-value):
+        0.5216329420986184
+
+========== DT Type: csp ==========
+
+Total Samples:  2990
+
+Light-Skin Results:
+        Total: 2319
+        Successful Detections: 1016
+        MR: 0.5619
+
+Dark-Skin Results:
+        Total: 671
+        Successful Detections: 269
+        MR: 0.5991
+
+Equal Opportunity Difference (EOD):
+        -0.0372
+
+Two Proportions Z-test (P-value):
+        0.08626407024410886
+
+========== DT Type: mgan ==========
+
+Total Samples:  2990
+
+Light-Skin Results:
+        Total: 2319
+        Successful Detections: 1221
+        MR: 0.4735
+
+Dark-Skin Results:
+        Total: 671
+        Successful Detections: 337
+        MR: 0.4978
+
+Equal Opportunity Difference (EOD):
+        -0.0243
+
+Two Proportions Z-test (P-value):
+        0.2674400031255866
+
+========== DT Type: prnet ==========
+
+Total Samples:  2990
+
+Light-Skin Results:
+        Total: 2319
+        Successful Detections: 1056
+        MR: 0.5446
+
+Dark-Skin Results:
+        Total: 671
+        Successful Detections: 304
+        MR: 0.5469
+
+Equal Opportunity Difference (EOD):
+        -0.0023
+
+Two Proportions Z-test (P-value):
+        0.9155906131938283
+
+```
+
+Step 2: Obtain data for the "night-time" scenario:
+
+Run the following command in the terminal:
+
+```
+python .\evaluation\evaluation.py --attribute skin --gt_path '..\Labels\RQ2_Partitioned\brightness\day_night\GT\night\skin' --dt_path '..\Labels\RQ2_Partitioned\brightness\day_night\DT\night'
+```
+
+Output:
+
+```
+========== Evaluation Results ==========
+
+Current Testing Attribute: Skin
+
+========== DT Type: yolox ==========
+
+Total Samples:  511
+
+Light-Skin Results:
+        Total: 395
+        Successful Detections: 349
+        MR: 0.1165
+
+Dark-Skin Results:
+        Total: 116
+        Successful Detections: 49
+        MR: 0.5776
+
+Equal Opportunity Difference (EOD):
+        -0.4611
+
+Two Proportions Z-test (P-value):
+        6.870922523647809e-26
+
+========== DT Type: retinanet ==========
+
+Total Samples:  511
+
+Light-Skin Results:
+        Total: 395
+        Successful Detections: 332
+        MR: 0.1595
+
+Dark-Skin Results:
+        Total: 116
+        Successful Detections: 47
+        MR: 0.5948
+
+Equal Opportunity Difference (EOD):
+        -0.4353
+
+Two Proportions Z-test (P-value):
+        4.602139385259241e-21
+
+========== DT Type: faster_rcnn ==========
+
+Total Samples:  511
+
+Light-Skin Results:
+        Total: 395
+        Successful Detections: 357
+        MR: 0.0962
+
+Dark-Skin Results:
+        Total: 116
+        Successful Detections: 111
+        MR: 0.0431
+
+Equal Opportunity Difference (EOD):
+        0.0531
+
+Two Proportions Z-test (P-value):
+        0.07010896072821972
+
+========== DT Type: cascade_rcnn ==========
+
+Total Samples:  511
+
+Light-Skin Results:
+        Total: 395
+        Successful Detections: 352
+        MR: 0.1089
+
+Dark-Skin Results:
+        Total: 116
+        Successful Detections: 108
+        MR: 0.0690
+
+Equal Opportunity Difference (EOD):
+        0.0399
+
+Two Proportions Z-test (P-value):
+        0.20753901838654143
+
+========== DT Type: alfnet ==========
+
+Total Samples:  511
+
+Light-Skin Results:
+        Total: 395
+        Successful Detections: 109
+        MR: 0.7241
+
+Dark-Skin Results:
+        Total: 116
+        Successful Detections: 31
+        MR: 0.7328
+
+Equal Opportunity Difference (EOD):
+        -0.0087
+
+Two Proportions Z-test (P-value):
+        0.8533181835733008
+
+========== DT Type: csp ==========
+
+Total Samples:  511
+
+Light-Skin Results:
+        Total: 395
+        Successful Detections: 35
+        MR: 0.9114
+
+Dark-Skin Results:
+        Total: 116
+        Successful Detections: 9
+        MR: 0.9224
+
+Equal Opportunity Difference (EOD):
+        -0.0110
+
+Two Proportions Z-test (P-value):
+        0.7098631497510621
+
+========== DT Type: mgan ==========
+
+Total Samples:  511
+
+Light-Skin Results:
+        Total: 395
+        Successful Detections: 59
+        MR: 0.8506
+
+Dark-Skin Results:
+        Total: 116
+        Successful Detections: 19
+        MR: 0.8362
+
+Equal Opportunity Difference (EOD):
+        0.0144
+
+Two Proportions Z-test (P-value):
+        0.7040691092353053
+
+========== DT Type: prnet ==========
+
+Total Samples:  511
+
+Light-Skin Results:
+        Total: 395
+        Successful Detections: 41
+        MR: 0.8962
+
+Dark-Skin Results:
+        Total: 116
+        Successful Detections: 16
+        MR: 0.8621
+
+Equal Opportunity Difference (EOD):
+        0.0341
+
+Two Proportions Z-test (P-value):
+        0.30454978991693227
+
+```
+
+Following the previous guidelines, you can repeatedly generate the results and record in the table. All the recorded results, including those for RQ1 and RQ2, will be conveniently presented in the "Results" directory. 
+
+Additionally,  we also include the necessary scripts to generate Figure 3 from our paper. These scripts are available in the "fig 3" folder.
 
 ### 3. Scenario Split
 
-
-
-### 4. Label Process
-
-
-
-### 
-
-
+The scripts `brightness-hsv.py` and `contrast-rms.py` serve the purpose of partitioning images into five distinct brightness levels and contrast levels, respectively. These scripts encompass the computation methods used for dividing the datasets based on brightness and contrast. As part of our efforts, we have already organized all the images into their respective categories and made them accessible in the "Dataset" part, which provides the source link.
 
 ## Results
 
-
+Through the above steps, each run will record all the results into a spreadsheet. The final computation results for each research question are saved in their corresponding Excel files. For RQ1, all the computation details and raw data are available in the `RQ1-overall fairness.xlsx` file, which includes Table 6, Figure 1, and Figure 2. As for RQ2, the raw data for all computations are stored in separate files named `RQ2.1-brightness.xlsx` , `RQ2.2-contrast.xlsx` ,   and "`RQ2.3-weather.xlsx` , which includes Table 7, Figure 4, Figure 5,  Table 8.
