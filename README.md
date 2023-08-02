@@ -740,8 +740,10 @@ Two Proportions Z-test (P-value):
 Following the previous guidelines, you can repeatedly generate the results and record in the table. All the recorded results, including those for RQ1 and RQ2, will be conveniently presented in the "Results" directory. 
 
 Additionally,  we also include the necessary scripts to generate Figure 3 from our paper. These scripts are available in the "fig 3" folder.
+### 3. Reproduction Scripts
+Moreover, we also provide reproduction scripts for each table and figure in order to reproduce the results in Section 4.
 
-### 3. Scenario Split
+### 4. Scenario Split
 
 The scripts `brightness-hsv.py` and `contrast-rms.py` serve the purpose of partitioning images into five distinct brightness levels and contrast levels, respectively. These scripts encompass the computation methods used for dividing the datasets based on brightness and contrast. As part of our efforts, we have already organized all the images into their respective categories and made them accessible in the "Dataset" part, which provides the source link.
 
