@@ -114,7 +114,7 @@ Confidence_score represents the probability assigned by the pedestrian detector 
 
 ### 2. RQ2 Fairness in Different Scenarios (RQ2_partitioned)
 
-In this section, we present the structured label information for RQ2 - Fairness in Different Scenarios ("RQ2_partitioned" directory). The labels has been categorized based on the classified dataset in "Dataset" part explained in the previous dataset introduction. The directory structure is as follows:
+In this section, we present the classified and structured label information for RQ2 - Fairness in Different Scenarios ("RQ2_partitioned" directory). The labels has been categorized based on the classified dataset in "Dataset" part explained in the previous dataset introduction. The directory structure is as follows:
 
 ```
 RQ2_partitioned
