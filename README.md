@@ -34,7 +34,8 @@ Datasets
 
 All the datasets can be downloaded from the provided link with aforementioned structure: 
 
-> baidunetdisk: https://pan.baidu.com/s/1QWlaHYD3qvWCm6OHFBPHVg; code: 7ca2 
+> baidunetdisk: https://pan.baidu.com/s/1ij-oriwmUgndjLr_DYugnw
+> code: awt0 
 
 The four benchmark testing datasets used in our experiments, as described in <u>Section 3.3.1</u>. The datasets are detailed in "*Table 2: Benchmark Datasets*" in our academic paper, providing information on the number of images and the time of capture for each dataset. 
 
@@ -78,11 +79,11 @@ The GT and DT format is explained as follows:
 
 **(1) GT  (Ground-Truth Labels)**
 
-The "GT" directory contains ground-truth labels for each dataset, as detailed in "*Table 4: Number of labeled pedestrian instances per dataset.*" in our academic paper. For the "BDD100k" dataset, we provide formulated  skin tone, age and gender labels on all four testing datasets. 
+The "GT" directory contains ground-truth labels for each dataset, as detailed in "*Table 4: Number of labeled pedestrian instances per dataset.*" in our academic paper. We provide formulated skin tone, age and gender labels on all four testing datasets. 
 
 Each image's ground truth label is stored in a separate TXT file within the corresponding attribute's folder. For example, in the "cp" dataset, the gender label for the image `berlin_000003_000019_leftImg8bit.png` can be found in the file `berlin_000003_000019_leftImg8bit.txt` within the `./Labels/RQ1_overall/GT/citypersons/gender/` directory. Each TXT file can contain labels for multiple individuals present in the image.
 
-The manual labeling process was performed using LabelImg, with the original format being in YOLO format. We have formulated each label's format in a more precise way, and the code for this formulation can be found in the "Script" directory. After that, the formulated GT label for each person is represented using a *five-digit format*, taking gender as an example:
+The manual labeling process was performed using LabelImg, with the original format being in YOLO format. We have formulated each label's format in a more precise way, the formulated GT label for each person is represented using a *five-digit format*, taking gender as an example:
 
 `gender X_min Y_min X_max Y_max`
 
@@ -155,7 +156,7 @@ RQ2_partitioned
          	|-- yolox, retinanet, faster rcnn, cascade rcnn, alfnet, prnet, csp, mgan
 ```
 
-Within each scenario (brightness, contrast, and weather), there are corresponding "GT" and "DT" directories. The structure of the "GT" directories' meaning is identical to that in RQ1_overall, containing ground-truth labels for each attribute, such as "gender," "age," and "skin." The "DT" directories also store the predicted labels from the eight pedestrian detectors.  At the same time,  as mentioned in Section 3.3.3, we provide the brightness and contrast values for all images containing labeled pedestrians with a total of 5,917 images. These values can be found in the `hsv-level.txt` and `contrast-level.txt`.
+Within each scenario (brightness, contrast, and weather), there are corresponding "GT" and "DT" directories. The structure of the "GT" directories' meaning is identical to that in RQ1_overall, containing ground-truth labels for each attribute. The "DT" directories also store the predicted labels from the eight pedestrian detectors.  At the same time,  as mentioned in Section 3.3.3, we provide the brightness and contrast values for all images containing labeled pedestrians with a total of 5,917 images. These values can be found in the `hsv-level.txt` and `contrast-level.txt`.
 
 ## Pedestrian Detection Models
 
@@ -171,7 +172,8 @@ In particular, all experiments were performed on a system equipped with 64GB RAM
 
 For accessibility, all the public models we used can be downloaded from the following link：
 
-> baidunetdisk: https://pan.baidu.com/s/1ZuexG8A972y8ddbwy7n2qw ; code：tvgf
+> baidunetdisk: https://pan.baidu.com/s/1ZuexG8A972y8ddbwy7n2qw 
+> code：tvgf
 
 The predicted results from each model can be found in the "DT" directory as previously mentioned.
 
@@ -186,11 +188,15 @@ For obtaining our results, you will only need to use the organized "Labels" fold
 Here are the required packages.
 
 ```
-pip install opencv-python
 pip install numpy
 pip install pandas
 pip install statsmodels
-pip install notebook
+pip install cv2
+```
+And you have to move this directory
+
+```
+cd /Fairness-Testing-of-Autonomous-Driving-Systems/Scripts/
 ```
 
 ### 2. Evaluation
@@ -203,185 +209,9 @@ The script `evaluation.py` offers three selectable parameters for customization:
 
 By customizing these parameters, you can perform evaluations and analysis for different sensitive attributes, experiment with various ground-truth and predicted labels, and explore fairness in pedestrian detection across different scenarios.
 
-**(1) Demo for RQ1**
+Here is an presentation demo.
 
-Suppose you want to obtain the results of the eight pedestrian detectors on the "age" attribute for the "citypersons" dataset, as shown in Figure 2. You can run the following command in the terminal:
-
-```
-python .\evaluation\evaluation.py --attribute age --gt_path '..\Labels\RQ1_Overall\GT\citypersons\age' --dt_path '..\Labels\RQ1_Overall\DT\citypersons'
-```
-
-Then, you can get the output as shown below:
-
-```
-========== Evaluation Results ==========
-
-Current Testing Attribute: Age
-
-========== DT Type: yolox ==========
-
-Total Samples:  4801
-
-Adults Results:
-        Total: 4568
-        Successful Detections: 3100
-        MR: 0.3214
-
-Children Results:
-        Total: 233
-        Successful Detections: 96
-        MR: 0.5880
-
-Equal Opportunity Difference (EOD):
-        -0.2666
-
-Two Proportions Z-test (P-value):
-        3.929363532426053e-17
-
-========== DT Type: retinanet ==========
-
-Total Samples:  4801
-
-Adults Results:
-        Total: 4568
-        Successful Detections: 3612
-        MR: 0.2093
-
-Children Results:
-        Total: 233
-        Successful Detections: 108
-        MR: 0.5365
-
-Equal Opportunity Difference (EOD):
-        -0.3272
-
-Two Proportions Z-test (P-value):
-        1.9549958518299283e-31
-
-========== DT Type: faster_rcnn ==========
-
-Total Samples:  4801
-
-Adults Results:
-        Total: 4568
-        Successful Detections: 4212
-        MR: 0.0779
-
-Children Results:
-        Total: 233
-        Successful Detections: 161
-        MR: 0.3090
-
-Equal Opportunity Difference (EOD):
-        -0.2311
-
-Two Proportions Z-test (P-value):
-        1.4465365133132638e-33
-
-========== DT Type: cascade_rcnn ==========
-
-Total Samples:  4801
-
-Adults Results:
-        Total: 4568
-        Successful Detections: 4173
-        MR: 0.0865
-
-Children Results:
-        Total: 233
-        Successful Detections: 155
-        MR: 0.3348
-
-Equal Opportunity Difference (EOD):
-        -0.2483
-
-Two Proportions Z-test (P-value):
-        2.4550390056615855e-35
-
-========== DT Type: alfnet ==========
-
-Total Samples:  4801
-
-Adults Results:
-        Total: 4568
-        Successful Detections: 3939
-        MR: 0.1377
-
-Children Results:
-        Total: 233
-        Successful Detections: 136
-        MR: 0.4163
-
-Equal Opportunity Difference (EOD):
-        -0.2786
-
-Two Proportions Z-test (P-value):
-        5.259954276460873e-31
-
-========== DT Type: csp ==========
-
-Total Samples:  4801
-
-Adults Results:
-        Total: 4568
-        Successful Detections: 4086
-        MR: 0.1055
-
-Children Results:
-        Total: 233
-        Successful Detections: 149
-        MR: 0.3605
-
-Equal Opportunity Difference (EOD):
-        -0.2550
-
-Two Proportions Z-test (P-value):
-        5.339469251217817e-32
-
-========== DT Type: mgan ==========
-
-Total Samples:  4801
-
-Adults Results:
-        Total: 4568
-        Successful Detections: 4156
-        MR: 0.0902
-
-Children Results:
-        Total: 233
-        Successful Detections: 160
-        MR: 0.3133
-
-Equal Opportunity Difference (EOD):
-        -0.2231
-
-Two Proportions Z-test (P-value):
-        2.9448118109214345e-28
-
-========== DT Type: prnet ==========
-
-Total Samples:  4801
-
-Adults Results:
-        Total: 4568
-        Successful Detections: 3873
-        MR: 0.1521
-
-Children Results:
-        Total: 233
-        Successful Detections: 136
-        MR: 0.4163
-
-Equal Opportunity Difference (EOD):
-        -0.2642
-
-Two Proportions Z-test (P-value):
-        3.0638135681065984e-26
-```
-
-Similarly, to generate the results for Table 6, Figure 1, and Figure 2 in RQ1, you can repeat the execution and change the paths accordingly, then record the output results. All the recorded data will be saved in the "RQ1-overall fairness.xlsx" in "RQ1" subdirectory within the "Results" folder.
-
-**(2) Demo for RQ2**
+**Demo**
 
 Suppose you want to calculate the statistics for the `age` attribute in both the "day-time" and "night-time" scenarios, as presented in Table 7, you can execute the following commands in the terminal:
 
@@ -737,15 +567,15 @@ Two Proportions Z-test (P-value):
 
 ```
 
-Following the previous guidelines, you can repeatedly generate the results and record in the table. All the recorded results, including those for RQ1 and RQ2, will be conveniently presented in the "Results" directory. 
+Similarly, to generate the results for Table 6, Figure 1, and Figure 2 in RQ1, as well as Table 7, Figure 4, Figure 5, and Table 8 in RQ2, you can repeat the execution and change the paths accordingly, then record the output results. To ensure the reproducibility of the results presented in <u>Section 4</u>, we have provided a "scripts input guideline" in the "generate_scripts" folder. This folder contains various script files, such as `fig1_fig2_table6_scripts.txt`, `fig4_scripts.txt`, `fig5_scripts.txt`, `table7_scripts.txt`, and `table8_scripts.txt`, which will aid in generating and recording the corresponding results accurately.
 
-Additionally,  we also include the necessary scripts to generate Figure 3 from our paper. These scripts are available in the "fig 3" folder.
-### 3. Reproduction Scripts
-Moreover, we also provide reproduction scripts for each table and figure in order to reproduce the results in Section 4.
+All the recorded results, including those for RQ1 and RQ2, will be conveniently presented in the "Results" directory. 
 
-### 4. Scenario Split
+Additionally,  we also include the necessary scripts in "fig 3" directory to generate Figure 3 from our paper. These scripts are available in the "fig 3" folder.
 
-The scripts `brightness-hsv.py` and `contrast-rms.py` serve the purpose of partitioning images into five distinct brightness levels and contrast levels, respectively. These scripts encompass the computation methods used for dividing the datasets based on brightness and contrast. As part of our efforts, we have already organized all the images into their respective categories and made them accessible in the "Dataset" part, which provides the source link.
+### 3. Scenario Split
+
+The scripts `brightness-hsv.py` and `contrast-rms.py` serve the purpose of partitioning images into five distinct brightness levels and contrast levels, respectively. These scripts encompass the computation methods such as HSV color space and RMS contrast used for dividing the datasets. As part of our efforts, we have already organized all the images into their respective categories and made them accessible in the "Dataset" part, which already provided the source link.
 
 ## Results
 
