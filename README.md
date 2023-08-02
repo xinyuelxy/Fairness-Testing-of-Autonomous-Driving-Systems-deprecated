@@ -188,9 +188,6 @@ For obtaining our results, you will only need to use the organized "Labels" fold
 
 
 
-
-
-
 ### 3. Scenario Split
 
 
