@@ -1,0 +1,42 @@
+Record in RQ2.2-contrast.xlsx
+
+====================================
+Gender (5 levels, 5*8=40results):
+====================================
+
+python .\evaluation\evaluation.py --attribute gender --gt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\GT\level1\gender' --dt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\DT\level1'
+
+python .\evaluation\evaluation.py --attribute gender --gt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\GT\level2\gender' --dt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\DT\level2'
+
+python .\evaluation\evaluation.py --attribute gender --gt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\GT\level3\gender' --dt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\DT\level3'
+
+python .\evaluation\evaluation.py --attribute gender --gt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\GT\level4\gender' --dt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\DT\level4'
+
+python .\evaluation\evaluation.py --attribute gender --gt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\GT\level5\gender' --dt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\DT\level5'
+
+====================================
+Age (5 levels, 5*8=40results)
+====================================
+
+python .\evaluation\evaluation.py --attribute age --gt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\GT\level1\age' --dt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\DT\level1'
+
+python .\evaluation\evaluation.py --attribute age --gt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\GT\level2\age' --dt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\DT\level2'
+
+python .\evaluation\evaluation.py --attribute age --gt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\GT\level3\age' --dt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\DT\level3'
+
+python .\evaluation\evaluation.py --attribute age --gt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\GT\level4\age' --dt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\DT\level4'
+
+python .\evaluation\evaluation.py --attribute age --gt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\GT\level5\age' --dt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\DT\level5'
+====================================
+Skin (5 levels, 5*8=40results)
+====================================
+
+python .\evaluation\evaluation.py --attribute skin --gt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\GT\level1\skin' --dt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\DT\level1'
+
+python .\evaluation\evaluation.py --attribute skin --gt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\GT\level2\skin' --dt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\DT\level2'
+
+python .\evaluation\evaluation.py --attribute skin --gt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\GT\level3\skin' --dt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\DT\level3'
+
+python .\evaluation\evaluation.py --attribute skin --gt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\GT\level4\skin' --dt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\DT\level4'
+
+python .\evaluation\evaluation.py --attribute skin --gt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\GT\level5\skin' --dt_path '..\Labels\RQ2_Partitioned\contrast\five_contrast_levels\DT\level5'

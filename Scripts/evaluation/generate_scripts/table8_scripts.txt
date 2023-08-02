@@ -1,0 +1,24 @@
+Record in RQ2.3-weather.xlsx
+
+=====================================
+Gender (rainy_non-rainy, 2*8=16results):
+=====================================
+
+python .\evaluation\evaluation.py --attribute gender --gt_path '..\Labels\RQ2_Partitioned\weather\GT\non-rainy\gender' --dt_path '..\Labels\RQ2_Partitioned\weather\DT\non-rainy'
+
+python .\evaluation\evaluation.py --attribute gender --gt_path '..\Labels\RQ2_Partitioned\weather\GT\rainy\gender' --dt_path '..\Labels\RQ2_Partitioned\weather\DT\rainy'
+
+=====================================
+Age (rainy_non-rainy, 2*8=16results):
+=====================================
+
+python .\evaluation\evaluation.py --attribute age --gt_path '..\Labels\RQ2_Partitioned\weather\GT\non-rainy\age' --dt_path '..\Labels\RQ2_Partitioned\weather\DT\non-rainy'
+
+python .\evaluation\evaluation.py --attribute age --gt_path '..\Labels\RQ2_Partitioned\weather\GT\rainy\age' --dt_path '..\Labels\RQ2_Partitioned\weather\DT\rainy'
+
+=====================================
+Skin (rainy_non-rainy, 2*8=16results):
+=====================================
+python .\evaluation\evaluation.py --attribute skin --gt_path '..\Labels\RQ2_Partitioned\weather\GT\non-rainy\skin' --dt_path '..\Labels\RQ2_Partitioned\weather\DT\non-rainy'
+
+python .\evaluation\evaluation.py --attribute skin --gt_path '..\Labels\RQ2_Partitioned\weather\GT\rainy\skin' --dt_path '..\Labels\RQ2_Partitioned\weather\DT\rainy'

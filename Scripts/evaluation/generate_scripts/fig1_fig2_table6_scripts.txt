@@ -1,0 +1,38 @@
+Record in RQ1-overall fairness.xlsx
+
+===========================================
+Gender (with four datasets, 4*8=32 results)
+===========================================
+
+python .\evaluation\evaluation.py --attribute gender --gt_path '..\Labels\RQ1_Overall\GT\citypersons\gender' --dt_path '..\Labels\RQ1_Overall\DT\citypersons'
+
+python .\evaluation\evaluation.py --attribute gender --gt_path '..\Labels\RQ1_Overall\GT\eurocity_day\gender' --dt_path '..\Labels\RQ1_Overall\DT\eurocity_day'
+
+python .\evaluation\evaluation.py --attribute gender --gt_path '..\Labels\RQ1_Overall\GT\eurocity_night\gender' --dt_path '..\Labels\RQ1_Overall\DT\eurocity_night'
+
+python .\evaluation\evaluation.py --attribute gender --gt_path '..\Labels\RQ1_Overall\GT\bdd100k\gender' --dt_path '..\Labels\RQ1_Overall\DT\bdd100k'
+
+=========================================
+Age (with four datasets, 4*8=32 results)
+=========================================
+
+python .\evaluation\evaluation.py --attribute age --gt_path '..\Labels\RQ1_Overall\GT\citypersons\age' --dt_path '..\Labels\RQ1_Overall\DT\citypersons'
+
+python .\evaluation\evaluation.py --attribute age --gt_path '..\Labels\RQ1_Overall\GT\eurocity_day\age' --dt_path '..\Labels\RQ1_Overall\DT\eurocity_day'
+
+python .\evaluation\evaluation.py --attribute age --gt_path '..\Labels\RQ1_Overall\GT\eurocity_night\age' --dt_path '..\Labels\RQ1_Overall\DT\eurocity_night'
+
+python .\evaluation\evaluation.py --attribute age --gt_path '..\Labels\RQ1_Overall\GT\bdd100k\age' --dt_path '..\Labels\RQ1_Overall\DT\bdd100k'
+
+=========================================
+Skin (with one datasets, 1*8=8 results)
+=========================================
+
+python .\evaluation\evaluation.py --attribute skin --gt_path '..\Labels\RQ1_Overall\GT\bdd100k\skin' --dt_path '..\Labels\RQ1_Overall\DT\bdd100k'
+
+
+
+
+
+
+

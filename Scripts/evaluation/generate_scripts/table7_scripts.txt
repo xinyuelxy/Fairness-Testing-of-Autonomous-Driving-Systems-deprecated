@@ -1,0 +1,26 @@
+Record in RQ2.1-brightness.xlsx
+
+===================================
+Gender (day_night, 2*8=16results):
+===================================
+
+python .\evaluation\evaluation.py --attribute gender --gt_path '..\Labels\RQ2_Partitioned\brightness\day_night\GT\day\gender' --dt_path '..\Labels\RQ2_Partitioned\brightness\day_night\DT\day'
+
+python .\evaluation\evaluation.py --attribute gender --gt_path '..\Labels\RQ2_Partitioned\brightness\day_night\GT\night\gender' --dt_path '..\Labels\RQ2_Partitioned\brightness\day_night\DT\night'
+
+
+===================================
+Age (day_night, 2*8=16results):
+===================================
+
+python .\evaluation\evaluation.py --attribute age --gt_path '..\Labels\RQ2_Partitioned\brightness\day_night\GT\day\age' --dt_path '..\Labels\RQ2_Partitioned\brightness\day_night\DT\day'
+
+python .\evaluation\evaluation.py --attribute age --gt_path '..\Labels\RQ2_Partitioned\brightness\day_night\GT\night\age' --dt_path '..\Labels\RQ2_Partitioned\brightness\day_night\DT\night'
+
+===================================
+Skin (day_night, 2*8=16results):
+===================================
+
+python .\evaluation\evaluation.py --attribute skin --gt_path '..\Labels\RQ2_Partitioned\brightness\day_night\GT\day\skin' --dt_path '..\Labels\RQ2_Partitioned\brightness\day_night\DT\day'
+
+python .\evaluation\evaluation.py --attribute skin --gt_path '..\Labels\RQ2_Partitioned\brightness\day_night\GT\night\skin' --dt_path '..\Labels\RQ2_Partitioned\brightness\day_night\DT\night'
