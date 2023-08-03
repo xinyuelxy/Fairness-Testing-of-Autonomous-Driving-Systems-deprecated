@@ -43,7 +43,10 @@ In addition,  we also provide the partitioned datasets from the scenario labelin
 
 ## Labels
 
-In the "Labels" directory, we provide the labels used in our experiments. This folder is divided into two main parts. The first part includes the labels for RQ1: Overall Fairness ("RQ1_overall" sub-directory), containing ground-truth labels for the four testing datasets. These labels are organized based on four testing datasets. The second part encompasses the labels for RQ2: Fairness in Different Scenarios ("RQ2_partitioned" sub-directory).  These labels are categorized based on fine-grained scenarios we discussed.
+In the "Labels" directory, we provide the labels used in our experiments. This folder is divided into two main parts. The first part includes the labels for RQ1: Overall Fairness ("RQ1_overall" sub-directory), containing ground-truth labels for the four testing datasets. These labels are organized based on four testing datasets. The second part encompasses the labels for RQ2: Fairness in Different Scenarios ("RQ2_partitioned" sub-directory).  These labels are categorized based on fine-grained scenarios we discussed. The alternative download link for the files is also available on the cloud storage platform.
+
+> baidunetdisk: https://pan.baidu.com/s/1cED0Zu-CjA3a7cyYcCC7bg 
+> code: d0st
 
 ### 1. RQ1 Overall Fairness (RQ1_overall)
 
