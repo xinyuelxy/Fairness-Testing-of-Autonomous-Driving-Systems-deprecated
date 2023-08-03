@@ -32,10 +32,7 @@ Datasets
 ```
 
 
-All the datasets can be downloaded from the provided link with aforementioned structure: 
-
-> baidunetdisk: https://pan.baidu.com/s/1ij-oriwmUgndjLr_DYugnw
-> code: awt0 
+All the datasets can be downloaded from the clouddisk link with aforementioned structure.
 
 The four benchmark testing datasets used in our experiments, as described in <u>Section 3.3.1</u>. The datasets are detailed in "*Table 2: Benchmark Datasets*" in our academic paper, providing information on the number of images and the time of capture for each dataset. 
 
@@ -43,10 +40,7 @@ In addition,  we also provide the partitioned datasets from the scenario labelin
 
 ## Labels
 
-In the "Labels" directory, we provide the labels used in our experiments. This folder is divided into two main parts. The first part includes the labels for RQ1: Overall Fairness ("RQ1_overall" sub-directory), containing ground-truth labels for the four testing datasets. These labels are organized based on four testing datasets. The second part encompasses the labels for RQ2: Fairness in Different Scenarios ("RQ2_partitioned" sub-directory).  These labels are categorized based on fine-grained scenarios we discussed. The alternative download link for the files is also available on the cloud storage platform.
-
-> baidunetdisk: https://pan.baidu.com/s/1cED0Zu-CjA3a7cyYcCC7bg 
-> code: d0st
+In the "Labels" directory, we provide the labels used in our experiments. This folder is divided into two main parts. The first part includes the labels for RQ1: Overall Fairness ("RQ1_overall" sub-directory), containing ground-truth labels for the four testing datasets. These labels are organized based on four testing datasets. The second part encompasses the labels for RQ2: Fairness in Different Scenarios ("RQ2_partitioned" sub-directory).  These labels are categorized based on fine-grained scenarios we discussed.
 
 ### 1. RQ1 Overall Fairness (RQ1_overall)
 
@@ -173,10 +167,7 @@ In this section, we provide a detailed description of the experimental settings 
 
 In particular, all experiments were performed on a system equipped with 64GB RAM, 2.5GHz Intel Xeon (R) v3 Dual CPUs, and one NVIDIA GeForce RTX 2080 Ti GPU. YOLOX, RetinaNet, Faster RCNN, and Cascade RCNN were implemented using PyTorch 1.8.1 and Python 3.7.10 on Ubuntu 18.04 LTS, following the MMdetection configuration. CSP and MGAN utilized PyTorch 1.10.0 and Python 3.8.10 on Ubuntu 18.04 LTS, adhering to the Pedestron configuration. Finally, ALFNet and PRNet  were implemented using Keras 2.0.6, Tensorflow 1.4.0, and Python 2.7.18 on Ubuntu 16.04 LTS following the instruction and configuration in the public framework they released.
 
-For accessibility, all the public models we used can be downloaded from the following link：
-
-> baidunetdisk: https://pan.baidu.com/s/1ZuexG8A972y8ddbwy7n2qw 
-> code：tvgf
+For accessibility, all the public models we used can be downloaded from the clouddisk link.
 
 The predicted results from each model can be found in the "DT" directory as previously mentioned.
 
