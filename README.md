@@ -70,7 +70,6 @@ RQ1_overall
     |-- ecp_night
         |-- yolox, retinanet, faster rcnn, cascade rcnn, alfnet, prnet, csp, mgan
 ```
-s
 
 The GT and DT format is explained as follows:
 
