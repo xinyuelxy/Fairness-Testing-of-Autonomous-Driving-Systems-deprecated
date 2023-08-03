@@ -14,23 +14,19 @@ Datasets
 |   |-- ecp_day (#2,427)
 |   |-- ecp_night (#2,126)
 |   |-- bdd100k (#2,233)
-|
 |-- partitioned
     |-- brightness
     |   |-- day and night
     |		|-- day(#4,400), night(#1,517)
     |   |-- five brightness levels
     |		|-- level1(#189), level2(#1,128), level3(#3,166), level4(#1,318), level5(#116)
-    |
     |-- contrast
     |   |-- five contrast levels
     |    	|-- level1(#246), level2(#1,523), level3(#2,383), level4(#1,667), level5(#98)
-    |
     |-- weather
         |-- rainy(#277)
         |-- non-rainy(#3800)
 ```
-
 
 All the datasets can be downloaded from the google drive link with aforementioned structure:
 
@@ -74,7 +70,7 @@ RQ1_overall
     |-- ecp_night
         |-- yolox, retinanet, faster rcnn, cascade rcnn, alfnet, prnet, csp, mgan
 ```
-
+s
 
 The GT and DT format is explained as follows:
 
@@ -192,7 +188,7 @@ pip install pandas
 pip install statsmodels
 pip install cv2
 ```
-And you have to move this directory
+You have to move this directory, and unzip the `Labels.zip` parallel to the Scripts folder. 
 
 ```
 cd /Fairness-Testing-of-Autonomous-Driving-Systems/Scripts/
