@@ -8,9 +8,9 @@ import pandas as pd
 
 def getTheContrast(path):
     """
-    求取图像的亮度值
-    :param path: 输入图像路径
-    :return: 返回该图像rms contrast
+    Get the RMS contrast value
+    :param path: image input path
+    :return: rms contrast
     """
 
     # Load the image in grayscale mode
@@ -26,7 +26,7 @@ def getTheContrast(path):
 
 def getTheYvalue():
     """
-    获得文件夹下所有图像的Y值
+    Get the rms contrast of each image, and write it into file. 
     :return:
     """
     original_path = "E:/images_person/"
@@ -46,7 +46,7 @@ def getTheYvalue():
 
 def readTextGetYvalue():
     """
-    得到txt文件中的所有Y值
+    Read the contrast value file.
     :return:
     """
     # read dictionary from txt file
@@ -77,10 +77,6 @@ def readTextGetYvalue():
     return class_dict
 
 def moveTheOriImageToRightIllumination():
-    """
-    根据illumination-level.txt中的结果将illumination_test_images中的图像分配到0-4种亮度等级中
-    :return:
-    """
     class_dict = readTextGetYvalue()
     ori_path = "E:/images_person/"
     dst_path = "../DataSet/Fine-Grained/contrast/images/"
@@ -93,4 +89,4 @@ def moveTheOriImageToRightIllumination():
 if __name__ == '__main__':
     #getTheYvalue()
     readTextGetYvalue()
-    moveTheOriImageToRightIllumination()  # 移动图像
+    moveTheOriImageToRightIllumination()  # move images
