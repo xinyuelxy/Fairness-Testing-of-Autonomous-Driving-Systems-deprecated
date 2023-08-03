@@ -208,7 +208,7 @@ Here is an presentation demo.
 
 **Demo**
 
-Suppose you want to calculate the statistics for the `age` attribute in both the "day-time" and "night-time" scenarios, as presented in Table 7, you can execute the following commands in the terminal:
+Suppose you want to calculate the statistics for the `skin` attribute in both the "day-time" and "night-time" scenarios, as presented in Table 7, you can execute the following commands in the terminal:
 
 Step 1: Obtain data for the "day time" scenario:
 
