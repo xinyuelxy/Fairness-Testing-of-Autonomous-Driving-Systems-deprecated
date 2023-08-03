@@ -6,9 +6,9 @@ import pandas as pd
 
 def getTheBright(path):
     """
-    求取图像的亮度值
-    :param path: 输入图像路径
-    :return: 返回该图像亮度值
+    Get the brightness value
+    :param path: image path
+    :return: the brightness value of this image
     """
     # Load the image
     img = cv2.imread(path)
@@ -24,7 +24,7 @@ def getTheBright(path):
 
 def getTheYvalue():
     """
-    获得文件夹下所有图像的Y值
+    Write the brightness value of each image to the file
     :return:
     """
     original_path = "E:/images_person/"
@@ -45,7 +45,7 @@ def getTheYvalue():
 
 def readTextGetYvalue():
     """
-    得到txt文件中的所有Y值
+    Read all the value of the written scripts and classify with equal bin width
     :return:
     """
     # read dictionary from txt file
@@ -75,7 +75,7 @@ def readTextGetYvalue():
     return class_dict
 def moveTheOriImageToRightIllumination():
     """
-    根据illumination-level.txt中的结果将illumination_test_images中的图像分配到0-4种亮度等级中
+    Assign the images in to 0-4 brightness levels(level1-level5) according to the results in illumination-level.txt
     :return:
     """
     class_dict = readTextGetYvalue()
@@ -90,4 +90,4 @@ def moveTheOriImageToRightIllumination():
 if __name__ == '__main__':
     getTheYvalue()
     readTextGetYvalue()
-    moveTheOriImageToRightIllumination()  # 移动图像
+    moveTheOriImageToRightIllumination()  # move the image
