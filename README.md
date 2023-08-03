@@ -98,7 +98,7 @@ The values X_min, Y_min, X_max, and Y_max are used to describe the *bounding box
 
 Our bounding boxes start at the point (`X_min`, `Y_min`) and end at the point (`X_max`, `Y_max`). Let's consider one of the sample images as an example:
 
-![image-20230727173236222](.\chart\image-20230727173236222.png)
+![image-20230727173236222](chart/image-20230727173236222.png)
 
 The final label for the middle person is: 
 
