@@ -29,7 +29,7 @@ Datasets
 ```
 
 All the datasets can be downloaded from the google drive link with aforementioned structure:
-https://drive.google.com/drive/folders/1RAuzR4tz_uZRe6XHvED6nddSsCEPm4nO?usp=drive_link
+https://drive.google.com/drive/folders/1RAuzR4tz_uZRe6XHvED6nddSsCEPm4nO?usp=sharing
 
 The four benchmark testing datasets used in our experiments, as described in <u>Section 3.3.1</u>. The datasets are detailed in "*Table 2: Benchmark Datasets*" in our academic paper, providing information on the number of images and the time of capture for each dataset. 
 
