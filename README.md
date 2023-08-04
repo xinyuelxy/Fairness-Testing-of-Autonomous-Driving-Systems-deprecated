@@ -29,7 +29,7 @@ Datasets
 ```
 
 All the datasets can be downloaded from the google drive link with aforementioned structure:
-
+https://drive.google.com/drive/folders/1JS0bslQj0_IA6Zhpvdqmkz7StuPgGfM1?usp=drive_link
 
 The four benchmark testing datasets used in our experiments, as described in <u>Section 3.3.1</u>. The datasets are detailed in "*Table 2: Benchmark Datasets*" in our academic paper, providing information on the number of images and the time of capture for each dataset. 
 
@@ -40,7 +40,7 @@ In addition,  we also provide the partitioned datasets from the scenario labelin
 In the "Labels" directory, we provide the labels used in our experiments. This folder is divided into two main parts. The first part includes the labels for RQ1: Overall Fairness ("RQ1_overall" sub-directory), containing ground-truth labels for the four testing datasets. These labels are organized based on four testing datasets. The second part encompasses the labels for RQ2: Fairness in Different Scenarios ("RQ2_partitioned" sub-directory).  These labels are categorized based on fine-grained scenarios we discussed.
 
 This directory can also be downloaded in the provided google drive link:
-https://drive.google.com/file/d/1ufFX3E8E7ncKn0ab53A9HUb3by5_MOxV/view?usp=drive_link
+https://drive.google.com/file/d/1ufFX3E8E7ncKn0ab53A9HUb3by5_MOxV/view?usp=sharing
 
 ### 1. RQ1 Overall Fairness (RQ1_overall)
 
