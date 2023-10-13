@@ -18,8 +18,6 @@ Datasets
     |-- brightness
     |   |-- day and night
     |		|-- day(#4,400), night(#1,517)
-    |   |-- five brightness levels
-    |		|-- level1(#189), level2(#1,128), level3(#3,166), level4(#1,318), level5(#116)
     |-- contrast
     |   |-- five contrast levels
     |    	|-- level1(#246), level2(#1,523), level3(#2,383), level4(#1,667), level5(#98)
@@ -124,15 +122,6 @@ RQ2_partitioned
 |       |-- DT
 |        	|-- day,night
 |        	 	|-- yolox, retinanet, faster rcnn, cascade rcnn, alfnet, prnet, csp, mgan
-|   |-- five_brightness_levels
-|       |-- GT
-|        	|-- level1,level2, level3, level4, level5
-|        	 	|-- gender, age, skin
-|       |-- DT
-|        	|-- level1,level2, level3, level4, level5
-|        	 	|-- yolox, retinanet, faster rcnn, cascade rcnn, alfnet, prnet, csp, mgan
-|       |-- hsv-info
-|        	|-- hsv-level.txt
 |-- contrast
 |   |-- five_contrast_levels
 |       |-- GT
@@ -569,7 +558,7 @@ Additionally,  we also include the necessary scripts in "fig 3" directory to gen
 
 ### 3. Scenario Split
 
-The scripts `brightness-hsv.py` and `contrast-rms.py` serve the purpose of partitioning images into five distinct brightness levels and contrast levels, respectively. These scripts encompass the computation methods such as HSV color space and RMS contrast used for dividing the datasets. As part of our efforts, we have already organized all the images into their respective categories and made them accessible in the "Dataset" part, which already provided the source link.
+The scripts `contrast-rms.py` serve the purpose of partitioning images into five distinct brightness levels and contrast levels, respectively. These scripts encompass the computation methods such as HSV color space and RMS contrast used for dividing the datasets. As part of our efforts, we have already organized all the images into their respective categories and made them accessible in the "Dataset" part, which already provided the source link.
 
 ## Results
 
