@@ -1,6 +1,6 @@
-# Unveiling the Blind Spots: A Critical Examination of Fairness in Autonomous Driving Systems    
+# Dark-Skin Individuals Are at More Risk on the Street: Unmasking Unfairness in Autonomous Driving Systems    
 
-Welcome to the online appendix for the paper entitled "Unveiling the Blind Spots: A Critical Examination of Fairness in Autonomous Driving Systems". Here, we provide supplementary materials including raw results,  datasets and sensitive attributes labels, Python code for the analysis process, and scripts to replicate our experiments.
+Welcome to the online appendix for the paper entitled "Dark-Skin Individuals Are at More Risk on the Street: Unmasking Unfairness in Autonomous Driving Systems". Here, we provide supplementary materials including raw results,  datasets and sensitive attributes labels, Python code for the analysis process, and scripts to replicate our experiments.
 
 ## Datasets
 
@@ -27,7 +27,7 @@ Datasets
 ```
 
 All the datasets can be downloaded from the google drive link with aforementioned structure:
-https://drive.google.com/drive/folders/1RAuzR4tz_uZRe6XHvED6nddSsCEPm4nO?usp=drive_link
+https://drive.google.com/file/d/1HGQt4ckab23T9F4UEcRVYFTlyjqS4q40/view?usp=drive_link
 
 The four benchmark testing datasets used in our experiments, as described in <u>Section 3.3.1</u>. The datasets are detailed in "*Table 2: Benchmark Datasets*" in our academic paper, providing information on the number of images and the time of capture for each dataset. 
 
@@ -141,7 +141,7 @@ RQ2_partitioned
          	|-- yolox, retinanet, faster rcnn, cascade rcnn, alfnet, prnet, csp, mgan
 ```
 
-Within each scenario (brightness, contrast, and weather), there are corresponding "GT" and "DT" directories. The structure of the "GT" directories' meaning is identical to that in RQ1_overall, containing ground-truth labels for each attribute. The "DT" directories also store the predicted labels from the eight pedestrian detectors.  At the same time,  as mentioned in Section 3.3.3, we provide the brightness and contrast values for all images containing labeled pedestrians with a total of 5,917 images. These values can be found in the `hsv-level.txt` and `contrast-level.txt`.
+Within each scenario (brightness, contrast, and weather), there are corresponding "GT" and "DT" directories. The structure of the "GT" directories' meaning is identical to that in RQ1_overall, containing ground-truth labels for each attribute. The "DT" directories also store the predicted labels from the eight pedestrian detectors.  At the same time,  as mentioned in Section 3.3.3, we provide the contrast values for all images containing labeled pedestrians with a total of 5,917 images. These values can be found in the `contrast-level.txt`.
 
 ## Pedestrian Detection Models
 
@@ -162,7 +162,7 @@ The predicted results from each model can be found in the "DT" directory as prev
 
 
 ## Scripts
-In this section, we provide the computational code for <u>Section 4</u> of the paper.  The "evaluation" folder contains the essential code for generating Table 6, Figure 1, Figure 2, Figure 3, Table 7, Figure 4, Figure 5, and Table 8. Additionally, it includes a demonstration example for computing evaluation metrics and performing statistical analysis. The "scenario_split" folder offers the code used in Section 3.3.3 of the paper, specifically for partitioning datasets based on five brightness and contrast levels.  
+In this section, we provide the computational code for <u>Section 4</u> of the paper.  The "evaluation" folder contains the essential code for generating Table 6, Figure 1, Figure 2, Figure 3, Table 7, Figure 4, and Table 8. Additionally, it includes a demonstration example for computing evaluation metrics and performing statistical analysis. The "scenario_split" folder offers the code used in Section 3.3.3 of the paper, specifically for partitioning datasets based on five brightness and contrast levels.  
 
 For obtaining our results, you will only need to use the organized "Labels" folder and some of the scripts provided in these directories. The "evaluation" folder will be instrumental in generating the evaluation results and figures, while the "scenario_split" folder will help in investigating fairness in different scenarios. 
 
@@ -550,7 +550,7 @@ Two Proportions Z-test (P-value):
 
 ```
 
-Similarly, to generate the results for Table 6, Figure 1, and Figure 2 in RQ1, as well as Table 7, Figure 4, Figure 5, and Table 8 in RQ2, you can repeat the execution and change the paths accordingly, then record the output results. To ensure the reproducibility of the results presented in <u>Section 4</u>, we have provided a "scripts input guideline" in the "generate_scripts" folder. This folder contains various script files, such as `fig1_fig2_table6_scripts.txt`, `fig4_scripts.txt`, `fig5_scripts.txt`, `table7_scripts.txt`, and `table8_scripts.txt`, which will aid in generating and recording the corresponding results accurately.
+Similarly, to generate the results for Table 6, Figure 1, and Figure 2 in RQ1, as well as Table 7, Figure 4, and Table 8 in RQ2, you can repeat the execution and change the paths accordingly, then record the output results. To ensure the reproducibility of the results presented in <u>Section 4</u>, we have provided a "scripts input guideline" in the "generate_scripts" folder. This folder contains various script files, such as `fig1_fig2_table6_scripts.txt`, `fig4_scripts.txt`, `fig5_scripts.txt`, `table7_scripts.txt`, and `table8_scripts.txt`, which will aid in generating and recording the corresponding results accurately.
 
 All the recorded results, including those for RQ1 and RQ2, will be conveniently presented in the "Results" directory. 
 
@@ -558,8 +558,8 @@ Additionally,  we also include the necessary scripts in "fig 3" directory to gen
 
 ### 3. Scenario Split
 
-The scripts `contrast-rms.py` serve the purpose of partitioning images into five distinct brightness levels and contrast levels, respectively. These scripts encompass the computation methods such as HSV color space and RMS contrast used for dividing the datasets. As part of our efforts, we have already organized all the images into their respective categories and made them accessible in the "Dataset" part, which already provided the source link.
+The scripts `contrast-rms.py` serve the purpose of partitioning images into five distinct contrast levels, respectively. These scripts encompass the computation methods such as RMS contrast used for dividing the datasets. As part of our efforts, we have already organized all the images into their respective categories and made them accessible in the "Dataset" part, which already provided the source link.
 
 ## Results
 
-Through the above steps, each run will record all the results into a spreadsheet. The final computation results for each research question are saved in their corresponding Excel files. For RQ1, all the computation details and raw data are available in the `RQ1-overall fairness.xlsx` file, which includes Table 6, Figure 1, and Figure 2. As for RQ2, the raw data for all computations are stored in separate files named `RQ2.1-brightness.xlsx` , `RQ2.2-contrast.xlsx` ,   and "`RQ2.3-weather.xlsx` , which includes Table 7, Figure 4, Figure 5,  Table 8.
+Through the above steps, each run will record all the results into a spreadsheet. The final computation results for each research question are saved in their corresponding Excel files. For RQ1, all the computation details and raw data are available in the `RQ1-overall fairness.xlsx` file, which includes Table 6, Figure 1, and Figure 2. As for RQ2, the raw data for all computations are stored in separate files named `RQ2.1-brightness.xlsx` , `RQ2.2-contrast.xlsx` ,   and "`RQ2.3-weather.xlsx` , which includes Table 7, Figure 4, Table 8.
