@@ -42,6 +42,13 @@ Our analysis utilizes two types of training datasets for the eight pedestrian de
 | CityPersons Training Set         | 2,975        | 2,975                   | 19,654                   |
 
 
+To further investigate the distribution of sensitive attributes in different training datasets, we annotate person instances in these datasets. Given the extensive number of label instances in training datasets, we randomly select a statistically significant sample with a 95% confidence level and a margin of error of ±5%. 
+
+From the MSCOCO training set's 64,115 pedestrian-containing images, our refined dataset included 382 images. Likewise, from the CityPersons training set, we derive a final dataset of 341 images. Below, we present detailed information on the age, gender, and skin-tone of pedestrians instances in each dataset:
+
+<img width="730" alt="image" src="https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/e6e2ffe8-e3e3-49c5-a19a-a80a5b5e078f">
+<img width="755" alt="image" src="https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/dce0f366-5838-4f35-a7d9-35e87389e94c">
+
 
 ## Labels
 
