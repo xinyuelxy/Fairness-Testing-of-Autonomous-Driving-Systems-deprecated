@@ -33,6 +33,16 @@ The four benchmark testing datasets used in our experiments, as described in <u>
 
 In addition,  we also provide the partitioned datasets from the scenario labeling discussed in <u>Section 3.3.3</u>. The scripts employed for partitioning these datasets can be located in the "Scripts" directory.  RQ2 focuses on real-world key scenarios, each having its respective sub-folder: brightness, contrast, and weather. Detailed information is presented in "*Table 5: Number of images in different brightness levels, contrast levels, and weather conditions*."
 
+## Training Details of Open-Source Models
+
+| Table: Training Details of Open-Source Models |
+|-------------------|----------------|-------------------|---------------------|
+| Name              | Total Images   | Images with Pedestrians | Pedestrian Bounding Boxes |
+|-------------------|----------------|-------------------|---------------------|
+| MSCOCO Training Set | 118,287       | 64,115            | 262,465             |
+| CityPersons Training Set | 2,975   | 2,975             | 19,654              |
+
+
 ## Labels
 
 In the "Labels" directory, we provide the labels used in our experiments. This folder is divided into two main parts. The first part includes the labels for RQ1: Overall Fairness ("RQ1_overall" sub-directory), containing ground-truth labels for the four testing datasets. These labels are organized based on four testing datasets. The second part encompasses the labels for RQ2: Fairness in Different Scenarios ("RQ2_partitioned" sub-directory).  These labels are categorized based on fine-grained scenarios we discussed.
