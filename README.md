@@ -46,7 +46,7 @@ To further investigate the distribution of sensitive attributes in different tra
 
 From the MSCOCO training set's 64,115 pedestrian-containing images, our refined dataset included 382 images. Likewise, from the CityPersons training set, we derive a final dataset of 341 images. Below, we present detailed information on the age, gender, and skin-tone of pedestrians instances in each dataset:
 
-<img width="770" alt="image" src="https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/e6e2ffe8-e3e3-49c5-a19a-a80a5b5e078f">
+<img width="790" alt="image" src="https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/e6e2ffe8-e3e3-49c5-a19a-a80a5b5e078f">
 <img width="700" alt="image" src="https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/dce0f366-5838-4f35-a7d9-35e87389e94c">
 
 
