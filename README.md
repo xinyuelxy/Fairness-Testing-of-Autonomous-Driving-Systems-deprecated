@@ -35,7 +35,6 @@ In addition,  we also provide the partitioned datasets from the scenario labelin
 
 ## Training Details of Open-Source Models
 
-|----------------------------------|--------------|-------------------------|--------------------------|
 | Name                             | Total Images | Images with Pedestrians | Pedestrian Bounding Boxes |
 |----------------------------------|--------------|-------------------------|--------------------------|
 | MSCOCO Training Set              | 118,287      | 64,115                  | 262,465                  |
