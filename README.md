@@ -36,11 +36,12 @@ In addition,  we also provide the partitioned datasets from the scenario labelin
 ## Training Details of Open-Source Models
 
 | Table: Training Details of Open-Source Models |
-|-------------------|----------------|-------------------|---------------------|
-| Name              | Total Images   | Images with Pedestrians | Pedestrian Bounding Boxes |
-|-------------------|----------------|-------------------|---------------------|
-| MSCOCO Training Set | 118,287       | 64,115            | 262,465             |
-| CityPersons Training Set | 2,975   | 2,975             | 19,654              |
+|----------------------------------|--------------|-------------------------|--------------------------|
+| Name                             | Total Images | Images with Pedestrians | Pedestrian Bounding Boxes |
+|----------------------------------|--------------|-------------------------|--------------------------|
+| MSCOCO Training Set              | 118,287      | 64,115                  | 262,465                  |
+| CityPersons Training Set         | 2,975        | 2,975                   | 19,654                   |
+
 
 
 ## Labels
