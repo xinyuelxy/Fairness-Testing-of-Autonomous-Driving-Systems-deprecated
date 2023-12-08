@@ -220,33 +220,33 @@ As Table 6 suggests, YOLOX and RetinaNet show the greatest bias among all detect
     <th>EOD</th>
   </tr>
   <tr>
+    <td rowspan="2">Contrast-Original (alpha = 1)</td>
     <td>yolox</td>
     <td>9.12%</td>
     <td>36.45%</td>
     <td><strong>-27.33%</strong></td>
   </tr>
   <tr>
-    <th rowspan="2">Contrast-Original (alpha = 1)</td>
     <td>retinanet</td>
     <td>11.53%</td>
     <td>36.45%</td>
     <td><strong>-24.92%</strong></td>
   </tr>
   <tr>
-    <td>Contrast-1.4 (alpha = 1.4)</td>
+    <td rowspan="2">Contrast-1.4 (alpha = 1.4)</td>
     <td>yolox</td>
     <td>9.38%</td>
     <td>6.54%</td>
     <td><strong>2.84%</strong></td>
   </tr>
   <tr>
-    <td></td>
     <td>retinanet</td>
     <td>13.14%</td>
     <td>7.48%</td>
     <td><strong>5.66%</strong></td>
   </tr>
 </table>
+
 
 
 
