@@ -7,14 +7,17 @@ Our analysis utilizes two types of training datasets for the eight pedestrian de
 | CityPersons Training Set         | 2,975        | 2,975                   | 19,654                   |
 
 
-To further investigate the distribution of sensitive attributes in different training datasets, we annotate person instances in these datasets. Given the extensive number of label instances in training datasets, we randomly select a statistically significant sample with a 95% confidence level and a margin of error of ±5%. 
+To further investigate the distribution of sensitive attributes in different training datasets, we annotate person instances in these sampled images following the procedures outlined in Section 3.3.2. To ensure statistical significance while also saving manual effort, we randomly sample 723 images from the training data (382 from MS COCO and 341 from Citypersons) at a 95% confidence level with a 5% confidence interval.
 
-From the MSCOCO training set's 64,115 pedestrian-containing images, our refined dataset included 382 images. Likewise, from the CityPersons training set, we derive a final dataset of 341 images. Below, we present detailed information on the age, gender, and skin-tone of pedestrians instances in each dataset:
+Below, we present detailed information on the age, gender, and skin-tone of pedestrians instances in each dataset:
 
 <img width="700" alt="image" src="https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/753bdb5a-bfa2-4054-b4a8-cf983ff7f102">
 
 
 <img width="700" alt="image" src="https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/dce0f366-5838-4f35-a7d9-35e87389e94c">
+
+Our examination reveals notable imbalances in the training data distribution, where only 22.39% represented dark-skin individuals, and 9.33% were children. Furthermore, the MS COCO training dataset exhibits greater imbalance compared to the Citypersons dataset, while detectors trained on MS COCO (general object detectors) displayed more pronounced bias than those based on Citypersons (pedestrian-specific detectors). Thus, the observed biases can be attributed, in part, to imbalances in the training data. We will add this analysis to the paper.
+
 
 
 ## Results for Intersectional Groups
