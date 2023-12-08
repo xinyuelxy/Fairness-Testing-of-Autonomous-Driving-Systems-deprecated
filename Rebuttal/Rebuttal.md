@@ -211,6 +211,44 @@ As Table 6 suggests, YOLOX and RetinaNet show the greatest bias among all detect
 | Contrast-1.4 (alpha = 1.4)    | yolox     | 9.38%  | 6.54%   | **2.84%**   |
 |                               | retinanet | 13.14% | 7.48%   | **5.66%**   |
 
+<table border="1">
+  <tr>
+    <th>Setting</th>
+    <th colspan="3">Contrast-Original (alpha = 1)</th>
+  </tr>
+  <tr>
+    <td>Detectors</td>
+    <td>yolox</td>
+    <td>9.12%</td>
+    <td>36.45%</td>
+    <td style="color: red;"><strong>-27.33%</strong></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>retinanet</td>
+    <td>11.53%</td>
+    <td>36.45%</td>
+    <td style="color: red;"><strong>-24.92%</strong></td>
+  </tr>
+  <tr>
+    <th colspan="5">Contrast-1.4 (alpha = 1.4)</th>
+  </tr>
+  <tr>
+    <td>Detectors</td>
+    <td>yolox</td>
+    <td>9.38%</td>
+    <td>6.54%</td>
+    <td style="color: red;"><strong>2.84%</strong></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>retinanet</td>
+    <td>13.14%</td>
+    <td>7.48%</td>
+    <td style="color: red;"><strong>5.66%</strong></td>
+  </tr>
+</table>
+
 
 Bold text indicates the miss rate difference is statistically significant. 
 
