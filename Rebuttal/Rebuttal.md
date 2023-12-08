@@ -65,19 +65,12 @@ Fig 1: I think it might be helpful here to show an average per dataset across mo
 
 As Table 6 suggests, YOLOX and RetinaNet show the greatest bias among all detectors we study. Therefore, due to the time limit, we use the two detectors for experiments. We randomly select 1294 images from our test data, ensuring a 95% confidence level with a 5% confidence interval. We use the OpenCV tool to increase the contrast of these images (adjusting alpha from 1 to 1.4). We find that contrast enhancement can significantly reduce bias. Particularly, the undetected proportions gap in YOLOX and RetinaNet between light-skinned and dark-skinned pedestrians dropped from 27.33% and 24.92% to 2.84% and 5.66%, respectively.
 
-| Contrast-Original (alpha = 1)                             |
-|-----------------------------------------------------------|
-| Detectors | MR_LS  | MR_DS   | EOD                        |
-|-----------|--------|---------|----------------------------|
-| yolox     | 9.12%  | 36.45%  | **-27.33%**                |
-| retinanet | 11.53% | 36.45%  | **-24.92%**                |
-
-| Contrast-1.4 (alpha = 1.4)                                |
-|-----------------------------------------------------------|
-| Detectors | MR_LS  | MR_DS   | EOD                        |
-|-----------|--------|---------|----------------------------|
-| yolox     | 9.38%  | 6.54%   | **2.84%**                  |
-| retinanet | 13.14% | 7.48%   | **5.66%**                  |
+| Setting                       | Detectors | MR_LS  | MR_DS   | EOD       |
+|-------------------------------|-----------|--------|---------|-----------|
+|                               | yolox     | 9.12%  | 36.45%  | **-27.33%** |
+| Contrast-Original (alpha = 1) | retinanet | 11.53% | 36.45%  | **-24.92%** |
+|                               | yolox     | 9.38%  | 6.54%   | **2.84%**   |
+| Contrast-1.4 (alpha = 1.4)    | retinanet | 13.14% | 7.48%   | **5.66%**   |
 
 
 
