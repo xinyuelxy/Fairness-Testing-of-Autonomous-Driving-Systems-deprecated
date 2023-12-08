@@ -59,6 +59,20 @@ Fig 1: I think it might be helpful here to show an average per dataset across mo
 
 ## Accuracy on age groups broken down by bounding box size
 
+We further categorize bounding box sizes into three levels (1-3), where larger sizes are indicated by higher levels. Our analysis reveals a trend where the disparity in detection accuracy between adults and children increases as bounding box sizes decrease. Specifically, Level 3 has an 8.99% gap (Adults: 23.36%, Children: 32.35%), Level 2 shows a 10.15% difference (Adults: 23.58%, Children: 33.72%), and Level 1 demonstrates a 23.95% disparity (Adults: 31.89%, Children: 55.85%). These findings suggest that smaller bounding box sizes significantly contribute to the bias in detection accuracy.
+
+|                           | small bounding boxes size (level 1) |       |              | middle bounding boxes size (level 2) |       |             | large bounding boxes size (level 3) |       |            |
+|---------------------------|-------------------------------------|-------|--------------|-------------------------------------|-------|-------------|------------------------------------|-------|------------|
+| detectors                 | MR_adult                            | MR_child | EOD         | MR_adult                            | MR_child | EOD        | MR_adult                           | MR_child | EOD       |
+| yolox                     | 51.33%                              | 72.06%   | **-20.72%** | 21.55%                              | 32.89%   | **-11.34%** | 9.23%                              | 18.63%   | **-9.39%** |
+| retinanet                 | 36.51%                              | 65.88%   | **-29.37%** | 17.24%                              | 30.87%   | **-13.64%** | 9.93%                              | 18.63%   | **-8.70%** |
+| faster_rcnn               | 12.69%                              | 38.53%   | **-25.83%** | 5.61%                               | 16.78%   | **-11.17%** | 2.79%                              | 10.78%   | **-7.99%** |
+| cascade_rcnn              | 14.43%                              | 42.35%   | **-27.93%** | 6.35%                               | 17.45%   | **-11.10%** | 3.24%                              | 11.76%   | **-8.53%** |
+| csp                       | 29.22%                              | 50.88%   | **-21.66%** | 34.12%                              | 44.30%   | **-10.18%** | 49.19%                             | 57.84%   | **-8.65%** |
+| mgan                      | 32.16%                              | 50.00%   | **-17.84%** | 32.02%                              | 38.26%   | **-6.23%**  | 36.41%                             | 47.06%   | **-10.65%**|
+| alfnet                    | 39.93%                              | 63.24%   | **-23.31%** | 34.15%                              | 40.94%   | **-6.79%**  | 35.89%                             | 39.22%   | **-3.32%** |
+| prnet                     | 38.88%                              | 63.82%   | **-24.95%** | 37.60%                              | 48.32%   | **-10.72%** | 40.21%                             | 54.90%   | **-14.69%**|
+| overall                   | 31.89%                              | 55.85%   | **-23.95%** | 23.58%                              | 33.72%   | **-10.15%** | 23.36%                             | 32.35%   | **-8.99%** |
 
 
 ## Preliminary study on contrast + image editing method 
