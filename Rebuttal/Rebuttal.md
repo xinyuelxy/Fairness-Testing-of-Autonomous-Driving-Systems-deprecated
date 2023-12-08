@@ -50,7 +50,7 @@ Furthermore, we have compared bounding box size distribution for men and women, 
 <img width="930" alt="distribution" src="https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/5cb9a869-dcda-4a92-8f9b-665f0f7fd51b">
 
 
-## Figure 1 revision: 
+## Figure 1 revision
 
 Fig 1: I think it might be helpful here to show an average per dataset across models for each age group
 
@@ -61,19 +61,137 @@ Fig 1: I think it might be helpful here to show an average per dataset across mo
 
 We further categorize bounding box sizes into three levels (1-3), where larger sizes are indicated by higher levels. Our analysis reveals a trend where the disparity in detection accuracy between adults and children increases as bounding box sizes decrease. Specifically, Level 3 has an 8.99% gap (Adults: 23.36%, Children: 32.35%), Level 2 shows a 10.15% difference (Adults: 23.58%, Children: 33.72%), and Level 1 demonstrates a 23.95% disparity (Adults: 31.89%, Children: 55.85%). These findings suggest that smaller bounding box sizes significantly contribute to the bias in detection accuracy.
 
-|                           | small bounding boxes size (level 1) |       |              | middle bounding boxes size (level 2) |       |             | large bounding boxes size (level 3) |       |            |
-|---------------------------|-------------------------------------|-------|--------------|-------------------------------------|-------|-------------|------------------------------------|-------|------------|
-| detectors                 | MR_adult                            | MR_child | EOD         | MR_adult                            | MR_child | EOD        | MR_adult                           | MR_child | EOD       |
-| yolox                     | 51.33%                              | 72.06%   | **-20.72%** | 21.55%                              | 32.89%   | **-11.34%** | 9.23%                              | 18.63%   | **-9.39%** |
-| retinanet                 | 36.51%                              | 65.88%   | **-29.37%** | 17.24%                              | 30.87%   | **-13.64%** | 9.93%                              | 18.63%   | **-8.70%** |
-| faster_rcnn               | 12.69%                              | 38.53%   | **-25.83%** | 5.61%                               | 16.78%   | **-11.17%** | 2.79%                              | 10.78%   | **-7.99%** |
-| cascade_rcnn              | 14.43%                              | 42.35%   | **-27.93%** | 6.35%                               | 17.45%   | **-11.10%** | 3.24%                              | 11.76%   | **-8.53%** |
-| csp                       | 29.22%                              | 50.88%   | **-21.66%** | 34.12%                              | 44.30%   | **-10.18%** | 49.19%                             | 57.84%   | **-8.65%** |
-| mgan                      | 32.16%                              | 50.00%   | **-17.84%** | 32.02%                              | 38.26%   | **-6.23%**  | 36.41%                             | 47.06%   | **-10.65%**|
-| alfnet                    | 39.93%                              | 63.24%   | **-23.31%** | 34.15%                              | 40.94%   | **-6.79%**  | 35.89%                             | 39.22%   | **-3.32%** |
-| prnet                     | 38.88%                              | 63.82%   | **-24.95%** | 37.60%                              | 48.32%   | **-10.72%** | 40.21%                             | 54.90%   | **-14.69%**|
-| overall                   | 31.89%                              | 55.85%   | **-23.95%** | 23.58%                              | 33.72%   | **-10.15%** | 23.36%                             | 32.35%   | **-8.99%** |
+<table border="1">
+  <tr>
+    <th colspan="3" style="background-color: #FFEEBA;">Small Bounding Boxes Size (Level 1)</th>
+    <th colspan="3" style="background-color: #FFEEBA;">Middle Bounding Boxes Size (Level 2)</th>
+    <th colspan="3" style="background-color: #FFEEBA;">Large Bounding Boxes Size (Level 3)</th>
+  </tr>
+  <tr>
+    <td>Detectors</td>
+    <td>MR_adult</td>
+    <td>MR_child</td>
+    <td>EOD</td>
+    <td>MR_adult</td>
+    <td>MR_child</td>
+    <td>EOD</td>
+    <td>MR_adult</td>
+    <td>MR_child</td>
+    <td>EOD</td>
+  </tr>
+  <tr>
+    <td>yolox</td>
+    <td>51.33%</td>
+    <td>72.06%</td>
+    <td style="background-color: grey;">-20.72%</td>
+    <td>21.55%</td>
+    <td>32.89%</td>
+    <td style="background-color: grey;">-11.34%</td>
+    <td>9.23%</td>
+    <td>18.63%</td>
+    <td style="background-color: grey;">-9.39%</td>
+  </tr>
+  <tr>
+    <td>retinanet</td>
+    <td>36.51%</td>
+    <td>65.88%</td>
+    <td style="background-color: grey;">-29.37%</td>
+    <td>17.24%</td>
+    <td>30.87%</td>
+    <td style="background-color: grey;">-13.64%</td>
+    <td>9.93%</td>
+    <td>18.63%</td>
+    <td style="background-color: grey;">-8.70%</td>
+  </tr>
+  <tr>
+    <td>faster_rcnn</td>
+    <td>12.69%</td>
+    <td>38.53%</td>
+    <td style="background-color: grey;">-25.83%</td>
+    <td>5.61%</td>
+    <td>16.78%</td>
+    <td style="background-color: grey;">-11.17%</td>
+    <td>2.79%</td>
+    <td>10.78%</td>
+    <td style="background-color: grey;">-7.99%</td>
+  </tr>
+  <tr>
+    <td>cascade_rcnn</td>
+    <td>14.43%</td>
+    <td>42.35%</td>
+    <td style="background-color: grey;">-27.93%</td>
+    <td>6.35%</td>
+    <td>17.45%</td>
+    <td style="background-color: grey;">-11.10%</td>
+    <td>3.24%</td>
+    <td>11.76%</td>
+    <td style="background-color: grey;">-8.53%</td>
+  </tr>
+  <tr>
+    <td>csp</td>
+    <td>29.22%</td>
+    <td>50.88%</td>
+    <td style="background-color: grey;">-21.66%</td>
+    <td>34.12%</td>
+    <td>44.30%</td>
+    <td style="background-color: grey;">-10.18%</td>
+    <td>49.19%</td>
+    <td>57.84%</td>
+    <td style="background-color: grey;">-8.65%</td>
+  </tr>
+  <tr>
+    <td>mgan</td>
+    <td>32.16%</td>
+    <td>50.00%</td>
+    <td style="background-color: grey;">-17.84%</td>
+    <td>32.02%</td>
+    <td>38.26%</td>
+    <td style="background-color: grey;">-6.23%</td>
+    <td>36.41%</td>
+    <td>47.06%</td>
+    <td style="background-color: grey;">-10.65%</td>
+  </tr>
+  <tr>
+    <td>alfnet</td>
+    <td>39.93%</td>
+    <td>63.24%</td>
+  <td style="background-color: grey;">-23.31%</td>
+  <td>34.15%</td>
+  <td>40.94%</td>
+  <td style="background-color: grey;">-6.79%</td>
+  <td>35.89%</td>
+  <td>39.22%</td>
+  <td style="background-color: grey;">-3.32%</td>
+  </tr>
+  <tr>
+  <td>prnet</td>
+  <td>38.88%</td>
+  <td>63.82%</td>
+  <td style="background-color: grey;">-24.95%</td>
+  <td>37.60%</td>
+  <td>48.32%</td>
+  <td style="background-color: grey;">-10.72%</td>
+  <td>40.21%</td>
+  <td>54.90%</td>
+  <td style="background-color: grey;">-14.69%</td>
+  </tr>
+  <tr>
+  <td>overall</td>
+  <td>31.89%</td>
+  <td>55.85%</td>
+  <td style="background-color: grey;">-23.95%</td>
+  <td>23.58%</td>
+  <td>33.72%</td>
+  <td style="background-color: grey;">-10.15%</td>
+  <td>23.36%</td>
+  <td>32.35%</td>
+  <td style="background-color: grey;">-8.99%</td>
+  </tr>
+</table>
 
+
+
+Bold text indicates the miss rate difference is statistically significant. 
 
 ## Preliminary study on contrast + image editing method 
 
@@ -87,7 +205,7 @@ As Table 6 suggests, YOLOX and RetinaNet show the greatest bias among all detect
 |                               | retinanet | 13.14% | 7.48%   | **5.66%**   |
 
 
-
+Bold text indicates the miss rate difference is statistically significant. 
 
 
 
