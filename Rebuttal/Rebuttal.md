@@ -47,5 +47,5 @@ Our findings are as follows:
 
 Furthermore, we have compared bounding box size distribution for men and women, and for dark-skin and light-skin individuals. Our findings reveal a comparable distribution in bounding box size between light-skin and dark-skin individuals. Likewise, women and men exhibit a similar distribution in bounding box size. This suggests that biases observed in gender and skin tone may not be attributed to differences in bounding box size. Detailed results have been included in our repository.
 
-<img width="778" alt="distribution" src="https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/5cb9a869-dcda-4a92-8f9b-665f0f7fd51b">
+<img width="878" alt="distribution" src="https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/5cb9a869-dcda-4a92-8f9b-665f0f7fd51b">
 
