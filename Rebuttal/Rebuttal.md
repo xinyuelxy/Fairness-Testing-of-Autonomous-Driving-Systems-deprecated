@@ -46,4 +46,5 @@ Our findings are as follows:
 1) Significant disparities exist in one-stage detectors: YOLOX and RetinanNet show a miss rate difference of 26.76% and 26.05%, respectively, for dark-skinned females compared to light-skinned males.
 2) Despite these disparities, they are not as pronounced as the overall differences reported in Table 6, where YOLOX and RetinaNet exhibit miss rate differences of 30.7% and 28.3%, respectively, between dark-skinned and light-skinned groups.
 
-## Results 
+## Bounding box size distribution for gender and skin-tone
+
