@@ -11,9 +11,9 @@ To further investigate the distribution of sensitive attributes in different tra
 
 Below, we present detailed information on the age, gender, and skin-tone of pedestrians instances in each dataset:
 
-<img width="597" alt="pic1" src="https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/223c6358-4b70-4d51-bf97-41ebb9dbe3e3">
+<img width="547" alt="pic1" src="https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/223c6358-4b70-4d51-bf97-41ebb9dbe3e3">
 
-<img width="655" alt="pic2" src="https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/e4bfbb57-1c23-443f-88bf-9a792355b965">
+<img width="605" alt="pic2" src="https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/e4bfbb57-1c23-443f-88bf-9a792355b965">
 
 
 Our examination reveals notable imbalances in the training data distribution, where only 22.39% represented dark-skin individuals, and 9.33% were children. Furthermore, the MS COCO training dataset exhibits greater imbalance compared to the Citypersons dataset, while detectors trained on MS COCO (general object detectors) displayed more pronounced bias than those based on Citypersons (pedestrian-specific detectors). Thus, the observed biases can be attributed, in part, to imbalances in the training data. We will add this analysis to the paper.
