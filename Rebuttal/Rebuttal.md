@@ -67,7 +67,7 @@ Bold text indicates the miss rate difference is statistically significant.
 
 We further categorize bounding box sizes into three levels (1-3), where larger sizes are indicated by higher levels. Our analysis reveals a trend where the disparity in detection accuracy between adults and children increases as bounding box sizes decrease. Specifically, Level 3 has an 8.99% gap (Adults: 23.36%, Children: 32.35%), Level 2 shows a 10.15% difference (Adults: 23.58%, Children: 33.72%), and Level 1 demonstrates a 23.95% disparity (Adults: 31.89%, Children: 55.85%). These findings suggest that smaller bounding box sizes significantly contribute to the bias in detection accuracy.
 
-<table border="1">
+<table>
   <tr>
     <th></th>
     <th colspan="3" style="background-color: #FFEEBA;">Small Bounding Boxes Size (Level 1)</th>
