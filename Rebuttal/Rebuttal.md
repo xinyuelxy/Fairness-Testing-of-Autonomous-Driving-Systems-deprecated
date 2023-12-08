@@ -213,7 +213,7 @@ As Table 6 suggests, YOLOX and RetinaNet show the greatest bias among all detect
 
 <table border="1">
   <tr>
-    <th>Setting</th>
+    <th rowspan="2">Setting</th>
     <th>Detectors</th>
     <th>MR_LS</th>
     <th>MR_DS</th>
@@ -226,14 +226,14 @@ As Table 6 suggests, YOLOX and RetinaNet show the greatest bias among all detect
     <td><strong>-27.33%</strong></td>
   </tr>
   <tr>
-    <td rowspan="2">Contrast-Original (alpha = 1)</td>
+    <td>Contrast-Original (alpha = 1)</td>
     <td>retinanet</td>
     <td>11.53%</td>
     <td>36.45%</td>
     <td><strong>-24.92%</strong></td>
   </tr>
   <tr>
-    <td rowspan="2">Contrast-1.4 (alpha = 1.4)</td>
+    <td>Contrast-1.4 (alpha = 1.4)</td>
     <td>yolox</td>
     <td>9.38%</td>
     <td>6.54%</td>
