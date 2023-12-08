@@ -50,9 +50,8 @@ Furthermore, we have compared bounding box size distribution for men and women, 
 <img width="930" alt="distribution" src="https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/5cb9a869-dcda-4a92-8f9b-665f0f7fd51b">
 
 
-## Figure 1 revision
+## Average miss rates for children and adults in each dataset (supplementary material for Fig 1)
 
-Fig 1: I think it might be helpful here to show an average per dataset across models for each age group
 
 
 
@@ -186,7 +185,7 @@ We further categorize bounding box sizes into three levels (1-3), where larger s
   <td style="background-color: grey; color: red;"><strong>-10.15%</strong></td>
   <td>23.36%</td>
   <td>32.35%</td>
-  <td style="background-color: grey; color: red;"><strong>-8.99%</strong></td>
+  <td style="background-color: grey; color: red;"><strong><undderline>-8.99%</undderline></strong></td>
   </tr>
 </table>
 
