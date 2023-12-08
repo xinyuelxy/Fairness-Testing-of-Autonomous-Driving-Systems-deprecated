@@ -67,10 +67,10 @@ As Table 6 suggests, YOLOX and RetinaNet show the greatest bias among all detect
 
 | Setting                       | Detectors | MR_LS  | MR_DS   | EOD       |
 |-------------------------------|-----------|--------|---------|-----------|
-|                               | yolox     | 9.12%  | 36.45%  | **-27.33%** |
-| Contrast-Original (alpha = 1) | retinanet | 11.53% | 36.45%  | **-24.92%** |
-|                               | yolox     | 9.38%  | 6.54%   | **2.84%**   |
-| Contrast-1.4 (alpha = 1.4)    | retinanet | 13.14% | 7.48%   | **5.66%**   |
+| Contrast-Original (alpha = 1) | yolox     | 9.12%  | 36.45%  | **-27.33%** |
+|                               | retinanet | 11.53% | 36.45%  | **-24.92%** |
+| Contrast-1.4 (alpha = 1.4)    | yolox     | 9.38%  | 6.54%   | **2.84%**   |
+|                               | retinanet | 13.14% | 7.48%   | **5.66%**   |
 
 
 
