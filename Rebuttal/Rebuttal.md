@@ -40,4 +40,10 @@ We also expand our analysis to include intersectional groups. Notably, we compar
 | prnet        | 0.5104       | 0.5336     | 0.0232      | 0.6190      | 0.5568      | -0.0622     |
 | overall      | 0.2676       | 0.2528     | -0.0147     | 0.3095      | 0.2738      | -0.0358     |
 
-Bold text indicates the miss rate difference is statistically significant.
+Bold text indicates the miss rate difference is statistically significant. 
+
+Our findings are as follows:
+1) Significant disparities exist in one-stage detectors: YOLOX and RetinanNet show a miss rate difference of 26.76% and 26.05%, respectively, for dark-skinned females compared to light-skinned males.
+2) Despite these disparities, they are not as pronounced as the overall differences reported in Table 6, where YOLOX and RetinaNet exhibit miss rate differences of 30.7% and 28.3%, respectively, between dark-skinned and light-skinned groups.
+
+## Results 
