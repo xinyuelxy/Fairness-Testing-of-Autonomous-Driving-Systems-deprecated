@@ -84,109 +84,109 @@ We further categorize bounding box sizes into three levels (1-3), where larger s
     <td>yolox</td>
     <td>51.33%</td>
     <td>72.06%</td>
-    <td style="background-color: grey;"><br>-20.72%<br></td>
+    <td style="background-color: grey;"><strong>-20.72%</strong></td>
     <td>21.55%</td>
     <td>32.89%</td>
-    <td style="background-color: grey;">-11.34%</td>
+    <td style="background-color: grey;"><strong>-11.34%</strong></td>
     <td>9.23%</td>
     <td>18.63%</td>
-    <td style="background-color: grey;">-9.39%</td>
+    <td style="background-color: grey;"><strong>-9.39%</strong></td>
   </tr>
   <tr>
     <td>retinanet</td>
     <td>36.51%</td>
     <td>65.88%</td>
-    <td style="background-color: grey;">-29.37%</td>
+    <td style="background-color: grey;"><strong>-29.37%</strong></td>
     <td>17.24%</td>
     <td>30.87%</td>
-    <td style="background-color: grey;">-13.64%</td>
+    <td style="background-color: grey;"><strong>-13.64%</strong></td>
     <td>9.93%</td>
     <td>18.63%</td>
-    <td style="background-color: grey;">-8.70%</td>
+    <td style="background-color: grey;"><strong>-8.70%</strong></td>
   </tr>
   <tr>
     <td>faster_rcnn</td>
     <td>12.69%</td>
     <td>38.53%</td>
-    <td style="background-color: grey;">-25.83%</td>
+    <td style="background-color: grey;"><strong>-25.83%</strong></td>
     <td>5.61%</td>
     <td>16.78%</td>
-    <td style="background-color: grey;">-11.17%</td>
+    <td style="background-color: grey;"><strong>-11.17%</strong></td>
     <td>2.79%</td>
     <td>10.78%</td>
-    <td style="background-color: grey;">-7.99%</td>
+    <td style="background-color: grey;"><strong>-7.99%</strong></td>
   </tr>
   <tr>
     <td>cascade_rcnn</td>
     <td>14.43%</td>
     <td>42.35%</td>
-    <td style="background-color: grey;">-27.93%</td>
+    <td style="background-color: grey;"><strong>-27.93%</strong></td>
     <td>6.35%</td>
     <td>17.45%</td>
-    <td style="background-color: grey;">-11.10%</td>
+    <td style="background-color: grey;"><strong>-11.10%</strong></td>
     <td>3.24%</td>
     <td>11.76%</td>
-    <td style="background-color: grey;">-8.53%</td>
+    <td style="background-color: grey;"><strong>-8.53%</strong></td>
   </tr>
   <tr>
     <td>csp</td>
     <td>29.22%</td>
     <td>50.88%</td>
-    <td style="background-color: grey;">-21.66%</td>
+    <td style="background-color: grey;"><strong>-21.66%</strong></td>
     <td>34.12%</td>
     <td>44.30%</td>
-    <td style="background-color: grey;">-10.18%</td>
+    <td style="background-color: grey;"><strong>-10.18%</strong></td>
     <td>49.19%</td>
     <td>57.84%</td>
-    <td style="background-color: grey;">-8.65%</td>
+    <td style="background-color: grey;"><strong>-8.65%</strong></td>
   </tr>
   <tr>
     <td>mgan</td>
     <td>32.16%</td>
     <td>50.00%</td>
-    <td style="background-color: grey;">-17.84%</td>
+    <td style="background-color: grey;"><strong>-17.84%</strong></td>
     <td>32.02%</td>
     <td>38.26%</td>
-    <td style="background-color: grey;">-6.23%</td>
+    <td style="background-color: grey;"><strong>-6.23%</strong></td>
     <td>36.41%</td>
     <td>47.06%</td>
-    <td style="background-color: grey;">-10.65%</td>
+    <td style="background-color: grey;"><strong>-10.65%</strong></td>
   </tr>
   <tr>
     <td>alfnet</td>
     <td>39.93%</td>
     <td>63.24%</td>
-  <td style="background-color: grey;">-23.31%</td>
+  <td style="background-color: grey;"><strong>-23.31%</strong></td>
   <td>34.15%</td>
   <td>40.94%</td>
-  <td style="background-color: grey;">-6.79%</td>
+  <td style="background-color: grey;"><strong>-6.79%</strong></td>
   <td>35.89%</td>
   <td>39.22%</td>
-  <td style="background-color: grey;">-3.32%</td>
+  <td style="background-color: grey;"><strong>-3.32%</strong></td>
   </tr>
   <tr>
   <td>prnet</td>
   <td>38.88%</td>
   <td>63.82%</td>
-  <td style="background-color: grey;">-24.95%</td>
+  <td style="background-color: grey;"><strong>-24.95%</strong></td>
   <td>37.60%</td>
   <td>48.32%</td>
-  <td style="background-color: grey;">-10.72%</td>
+  <td style="background-color: grey;"><strong>-10.72%</strong></td>
   <td>40.21%</td>
   <td>54.90%</td>
-  <td style="background-color: grey;">-14.69%</td>
+  <td style="background-color: grey;"><strong>-14.69%</strong></td>
   </tr>
   <tr>
   <td>overall</td>
   <td>31.89%</td>
   <td>55.85%</td>
-  <td style="background-color: grey;">-23.95%</td>
+  <td style="background-color: grey;"><strong>-23.95%</strong></td>
   <td>23.58%</td>
   <td>33.72%</td>
-  <td style="background-color: grey;">-10.15%</td>
+  <td style="background-color: grey;"><strong>-10.15%</strong></td>
   <td>23.36%</td>
   <td>32.35%</td>
-  <td style="background-color: grey;">-8.99%</td>
+  <td style="background-color: grey;"><strong>-8.99%</strong></td>
   </tr>
 </table>
 
