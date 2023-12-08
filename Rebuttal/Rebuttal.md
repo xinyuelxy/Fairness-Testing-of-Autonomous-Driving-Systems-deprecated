@@ -52,9 +52,10 @@ Furthermore, we have compared bounding box size distribution for men and women, 
 
 ## Average miss rates for children and adults in each dataset (supplementary material for Fig 1)
 
+<img width="930" alt="distribution" src="https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/115aecea-52de-436e-8742-d2122d28dfb9">
 
-![bar_chart](https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/115aecea-52de-436e-8742-d2122d28dfb9)
 
+Bold text indicates the miss rate difference is statistically significant.
 
 
 ## Accuracy on age groups broken down by bounding box size
