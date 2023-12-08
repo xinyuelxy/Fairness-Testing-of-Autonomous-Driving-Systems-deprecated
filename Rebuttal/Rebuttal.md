@@ -185,7 +185,7 @@ We further categorize bounding box sizes into three levels (1-3), where larger s
   <td style="background-color: grey; color: red;"><strong>-10.15%</strong></td>
   <td>23.36%</td>
   <td>32.35%</td>
-  <td style="background-color: grey; color: red;"><strong><undderline>-8.99%</undderline></strong></td>
+  <td style="background-color: grey; color: red;"><strong><underline>-8.99%</underline></strong></td>
   </tr>
 </table>
 
