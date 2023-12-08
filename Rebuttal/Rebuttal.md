@@ -20,9 +20,6 @@ Below, we present detailed information on the age, gender, and skin-tone of pede
 
 Our examination reveals notable imbalances in the training data distribution, where only 22.39% represented dark-skin individuals, and 9.33% were children. Furthermore, the MS COCO training dataset exhibits greater imbalance compared to the Citypersons dataset, while detectors trained on MS COCO (general object detectors) displayed more pronounced bias than those based on Citypersons (pedestrian-specific detectors). Thus, the observed biases can be attributed, in part, to imbalances in the training data. We will add this analysis to the paper.
 
-
-
-
 ## Results for Intersectional Groups
 
 We also expand our analysis to include intersectional groups. Notably, we compare the miss rates for dark-skin females vs. light-skin males, and dark-skin children vs. light-skin adults. The detailed results are shown below.
@@ -47,4 +44,8 @@ Our findings are as follows:
 2) Despite these disparities, they are not as pronounced as the overall differences reported in Table 6, where YOLOX and RetinaNet exhibit miss rate differences of 30.7% and 28.3%, respectively, between dark-skinned and light-skinned groups.
 
 ## Bounding box size distribution for gender and skin-tone
+
+Furthermore, we have compared bounding box size distribution for men and women, and for dark-skin and light-skin individuals. Our findings reveal a comparable distribution in bounding box size between light-skin and dark-skin individuals. Likewise, women and men exhibit a similar distribution in bounding box size. This suggests that biases observed in gender and skin tone may not be attributed to differences in bounding box size. Detailed results have been included in our repository.
+
+<img width="778" alt="distribution" src="https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/5cb9a869-dcda-4a92-8f9b-665f0f7fd51b">
 
