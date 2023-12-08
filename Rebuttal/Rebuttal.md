@@ -84,7 +84,7 @@ We further categorize bounding box sizes into three levels (1-3), where larger s
     <td>yolox</td>
     <td>51.33%</td>
     <td>72.06%</td>
-    <td style="background-color: grey;">-20.72%</td>
+    <td style="background-color: grey;"><br>-20.72%<br></td>
     <td>21.55%</td>
     <td>32.89%</td>
     <td style="background-color: grey;">-11.34%</td>
