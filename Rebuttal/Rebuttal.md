@@ -53,6 +53,7 @@ Furthermore, we have compared bounding box size distribution for men and women, 
 ## Average miss rates for children and adults in each dataset (supplementary material for Fig 1)
 
 
+![bar_chart](https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/115aecea-52de-436e-8742-d2122d28dfb9)
 
 
 
