@@ -63,7 +63,8 @@ We further categorize bounding box sizes into three levels (1-3), where larger s
 
 <table border="1">
   <tr>
-    <th colspan="4" style="background-color: #FFEEBA;">Small Bounding Boxes Size (Level 1)</th>
+    <th></th>
+    <th colspan="3" style="background-color: #FFEEBA;">Small Bounding Boxes Size (Level 1)</th>
     <th colspan="3" style="background-color: #FFEEBA;">Middle Bounding Boxes Size (Level 2)</th>
     <th colspan="3" style="background-color: #FFEEBA;">Large Bounding Boxes Size (Level 3)</th>
   </tr>
