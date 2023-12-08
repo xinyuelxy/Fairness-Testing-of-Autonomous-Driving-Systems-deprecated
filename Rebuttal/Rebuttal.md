@@ -11,9 +11,9 @@ To further investigate the distribution of sensitive attributes in different tra
 
 Below, we present detailed information on the age, gender, and skin-tone of pedestrians instances in each dataset:
 
-<img width="547" alt="pic1" src="https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/223c6358-4b70-4d51-bf97-41ebb9dbe3e3">
+<img width="537" alt="pic1" src="https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/223c6358-4b70-4d51-bf97-41ebb9dbe3e3">
 
-<img width="605" alt="pic2" src="https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/e4bfbb57-1c23-443f-88bf-9a792355b965">
+<img width="595" alt="pic2" src="https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/e4bfbb57-1c23-443f-88bf-9a792355b965">
 
 <img width="543" alt="pic3" src="https://github.com/FairnessResearch/Fairness-Testing-of-Autonomous-Driving-Systems/assets/140967709/ca9e25de-8eff-4822-a86d-1fe0a94c51e9">
 
