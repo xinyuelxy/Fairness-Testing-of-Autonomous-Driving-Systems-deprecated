@@ -1,6 +1,4 @@
-# Dark-Skin Individuals Are at More Risk on the Street: Unmasking Unfairness in Autonomous Driving Systems    
-
-Welcome to the online appendix for the paper entitled "Dark-Skin Individuals Are at More Risk on the Street: Unmasking Unfairness in Autonomous Driving Systems". Here, we provide supplementary materials including raw results,  datasets and sensitive attributes labels, Python code for the analysis process, and scripts to replicate our experiments.
+# Unmasking Unfairness in Autonomous Driving Systems (deprecated) 
 
 ## Datasets
 
